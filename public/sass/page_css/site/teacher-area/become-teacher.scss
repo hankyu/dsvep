@@ -1,0 +1,544 @@
+@import '../../../base.scss';
+
+
+$pd-section: 80px;
+$pd-section-xs: 40px;
+$plr-comon: 30px;
+
+$max-w-menu-hide: 830px;
+$max-w-menu-small: 1024px;
+$max-h-menu-small1: 1000px;
+$min-h-menu-small1: 916px;
+$min-h-menu-small2: 831px;
+$max-h-menu-small2: $min-h-menu-small1 - 0.1px;
+$max-h-menu-hide: $min-h-menu-small2 - 0.1px;
+
+
+
+.navbar-default {
+  background-color: transparent;
+}
+.nav.navbar-nav
+{
+  background-color: transparent;
+}
+
+.section-default
+{
+  padding-top: $pd-section;
+  padding-bottom: $pd-section;
+
+  @media (max-width: $max-w-xs)
+  {
+    padding-top: $pd-section-xs;
+    padding-bottom: $pd-section-xs;
+  }
+}
+.section-gainsboro
+{
+  @extend .section-default;
+  background-color: $color-gainsboro;
+}
+
+#summary
+{
+  position: relative;
+  z-index: 120;
+  display: none;
+
+  &.active
+  {
+    display: block;
+  }
+
+  .header-pic
+  {
+    height: 640px;
+    background:
+    {
+      color: transparent;
+      image: url(../../../../img/background/bg-becom-teacher.jpg);
+      position: center center;
+      repeat: no-repeat;
+    }
+    @include background-size(cover);
+
+    .animatedParent
+    {
+      width: 100%;
+      height: 100%;
+      padding-left: $plr-comon;
+      padding-right: $plr-comon;
+      padding-top: 60px;
+      padding-bottom: 60px;
+      background-color: #0003;
+      @include display-flex(flex);
+      @include flex-flow(column wrap);
+      @include justify-content(center);
+      @include align-items(center);
+
+      .header-content {
+        display: inline-block;
+        line-height: 2;
+        max-width: 100%;
+
+      }
+    }
+
+    .page-title
+    {
+      font-size: 40px;
+      letter-spacing: 12px;
+      font-weight: 900;
+      color: #fff;
+      @include text-shadow(3px 4px 3px rgba(0, 0, 0, 1));
+    }
+
+
+    @media (max-width: $max-w-sm)
+    {
+      height: 560px;
+    }
+
+    @media (max-width: $max-w-xs)
+    {
+      height: 320px;
+
+      .animatedParent
+      {
+        padding-top: 40px;
+        padding-bottom: 40px;
+      }
+      .page-title
+      {
+        font-size: 30px;
+        letter-spacing: normal;
+      }
+
+      .btn-create
+      {
+        font-size: 20px;
+      }
+    }
+
+    &.header-pic-fail
+    {
+      height: auto;
+      
+      .animatedParent {
+        padding: 15vh 30px;
+      }
+
+      .article-fail-reason
+      {
+        padding: 30px;
+        max-width: 700px;
+        background-color: #fffc;
+        text-align: left;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        @include border-radius(5px);
+        @include box-shadow(3px 4px 10px -5px rgba(0, 0, 0, 1));
+
+        p,
+        ol
+        {
+          color: #141414;
+          font-size: 16px;
+        }
+
+        ol
+        {
+          display: inline-block;
+          text-align: left;
+          margin-left: 25px;
+          list-style-type: decimal;
+        }
+        p:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      @media (max-width: $max-w-sm)
+      {
+        height: auto;
+
+        .animatedParent {
+          padding: 30px 30px;
+        }
+      }
+
+      @media (max-width: $max-w-xs)
+      {
+        height: auto;
+      }
+    }
+  }
+  p.p-over-bgim
+  {
+    font-size: 24px;
+    font-weight: 400;
+    color: #fefefe;
+    @include text-shadow(2px 3px 3px rgba(0, 0, 0, 1));
+
+    @media (max-width: $max-w-xs)
+    {
+      font-size: 18px;
+      @include text-shadow(2px 3px 2px rgba(0, 0, 0, 1));
+    }
+  }
+
+  .btn-become-teacher-introduce,,
+  #btn_here_refuel
+  {
+    color: #fff;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    background: #ff98aa;
+    border: none;
+    line-height: 1.5;
+    padding: 10px 20px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -o-border-radius: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    -webkit-box-shadow: 3px 3px 5px 0 #0006;
+    -moz-box-shadow: 3px 3px 5px 0 #0006;
+    box-shadow: 3px 3px 5px 0 #0006;
+    font-weight: bold;
+    font-size: 20px;
+
+    &:hover,
+    &:focus
+    {
+      background: #e89;
+    }
+  }
+
+  .section-slogan
+  {
+    @extend .section-gainsboro;
+    text-align: center;
+    font-size: 20px;
+    padding-left: $plr-comon;
+    padding-right: $plr-comon;
+
+    @media (max-width: $max-w-xs)
+    {
+      font-size: 18px;
+      line-height: 1.8;
+    }
+  }
+
+  #features
+  {
+    @extend .section-default;
+
+    .feature-card
+    {
+      padding: 20px;
+
+      .feature-icon
+      {
+        margin: auto;
+        width: 60%;
+        max-width: 160px;
+        @include border-radius(50%);
+        overflow: hidden;
+      }
+
+      h3
+      {
+        font-size: 24px;
+        line-height: 1.5;
+        margin-top: 15px;
+        margin-bottom: 0;
+      }
+      
+      p
+      {
+        line-height: 1.5;
+        // text-align: left;
+        margin: 0;
+        font-size: 16px;
+      }
+      p+p
+      {
+        margin-top: 10px;
+      }
+      p.feature-sub-title
+      {
+        color: $color-font-primary;
+        text-align: center;
+      }
+      
+      @media (max-width: $max-w-sm)
+      {
+        padding: 60px;
+      }
+
+      @media (max-width: $max-w-xs)
+      {
+        padding: 40px;
+      }
+    }
+  }
+
+  .section-diagram
+  {
+    @extend .section-gainsboro;
+    text-align: center;
+
+    img
+    {
+      margin: auto;
+      width: 374px;
+
+      @media (max-width: $max-w-xs)
+      {
+        width: 80%;
+        max-width: 300px;
+      }
+    }
+  }
+
+  .section-become-teacher
+  {
+    // @extend .section-default;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-right: $plr-comon;
+    padding-left: $plr-comon;
+
+    background: {
+      color: transparent;
+      image: url(/img/background/bg-becom-teacher2.jpg);
+      position: center center;
+      repeat: no-repeat;
+    }
+    @include background-size(cover);
+    text-align: center;
+
+
+    p.p-over-bgim
+    {
+      margin-top: 40px;
+    }
+  }
+}
+#fill_page
+{
+  display: none;
+
+  &.active
+  {
+    display: block;
+  }
+}
+.textarea-error
+{
+    border-color: #A94442;
+
+  &:focus
+  {
+    border-color: #843534;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 6px #CE8483;
+  }
+}
+.has-feedback .form-control-feedback
+{
+    top: 0;
+    right: 20px;
+    z-index: 100;
+}
+
+.become-teacher-profile-content
+{
+    padding-top: 20px;
+}
+
+
+.become-teacher-menu
+{
+    position: fixed;
+    top: calc(20px + 78px);
+    z-index: 100;
+
+    @media (max-width: $max-w-menu-small)
+    {
+        left: 3vw;
+        display: none;
+    }
+
+    li
+    {
+        float: none;
+        display: flex;
+    }
+
+    @media (max-height: $max-w-menu-hide){
+      display: none;
+    }
+
+    .become-teacher-menu-item
+    {
+        height: 40px;
+        padding: 0 30px;
+        margin: 5px;
+        display: flex;
+        align-items: center;
+        background: #FFE3E8;
+        border-radius: 25px;
+        cursor: pointer;
+
+        &:hover,
+        &.active
+        {
+            transform: translateX(-1vw);
+            background: #FF98AA;
+
+            span
+            {
+                color: #FFF;
+            }
+        }
+
+        &.active a
+        {
+            background-color: unset !important;
+        }     
+
+        a
+        {
+            padding: 0 !important;
+            margin: 0 auto;
+        }
+
+        span
+        {
+            line-height: normal;
+            display: block;
+            font-size: 2rem;
+            color: #666;
+        }
+
+        @media (max-height: $max-h-menu-small1) and (min-height: $min-h-menu-small1)
+        {
+            height: 33px;
+            margin: 3px;
+        }
+        
+        @media (max-height: $max-h-menu-small2) and (min-height: $min-h-menu-small2){
+            height: 28px;
+            margin: 2px;
+        }
+    }
+}
+
+#profile
+{
+    position: relative;
+
+    .become-teacher-card
+    {
+        padding: 20px;
+        margin-bottom: 100px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px -3px #262626;
+        background: #FFF;
+
+        @media (max-width: 767px)
+        {
+            margin-bottom: 5vh;
+        }
+    }
+
+    .become-teacher-btn-wrapper
+    {
+        margin-bottom: 10vh;
+    }
+}
+
+#education > div
+{
+    display: flex;
+    align-items: center;
+    
+    @media (max-width: 767px)
+    {
+        display: block;
+    }
+}
+
+@media (max-width: 767px)
+{
+    .btn.btn-info
+    {
+        width: 100%;
+    }
+}
+
+@media (max-width: 992px)
+{
+    .apply-content div
+    {
+        font-size: 20px;
+    }
+}
+
+
+// auditing
+.auditing-img
+{
+    width: 100vw;
+    height: 70vh;
+    max-width:  100%;
+    display:  flex;
+    align-items: center;
+    justify-content: center;
+
+    img
+    {
+        height: 50vmin;
+    }
+}
+
+
+.treaty .jconfirm-content
+{
+  max-height: 50vh;
+  border: 1px solid $color-gainsboro;
+}
+.policy-container
+{
+  padding-left: 10px;
+  padding-right: 10px;
+  line-height: 1.5;
+
+  h3
+  {
+    font-size: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+  h4
+  {
+    font-size: 16px;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+  ul
+  {
+    list-style-type: disc;
+    margin-left: 25px;
+    list-style-position: outside;
+  }
+
+  @media (max-width: $max-w-xs)
+  {
+
+  }
+}

@@ -1,0 +1,55 @@
+.urlParamTabs__tabs {
+    padding-left: 0;
+    margin-bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+}
+
+.urlParamTabs__tab {
+    display: inline-block;
+    flex: 1 1 auto;
+    text-align: center;
+    margin-bottom: -1px;
+}
+
+$urlParamTabLink-bgc-active: $white;
+$urlParamTabLink-bgc: $gainsboro;
+$urlParamTabLink-bgc-hover: $darkwhite;
+$urlParamTabLink-border: $color-border-primary;
+$urlParamTabLink-color: $gray;
+$urlParamTabLink-color-active: $font-primary;
+
+.urlParamTabs__link {
+    display: block;
+    background-color: $urlParamTabLink-bgc;
+    border: 1px solid $urlParamTabLink-border;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    text-decoration: none;
+    color: $urlParamTabLink-color;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    &:hover {
+        background-color: $urlParamTabLink-bgc-hover;
+        color: $urlParamTabLink-color-active;
+    }
+
+    &.active {
+        background-color: $urlParamTabLink-bgc-active;
+        border-bottom: none;
+        color: $urlParamTabLink-color-active;
+        &:hover {
+            background-color: $urlParamTabLink-bgc-active;
+            color: $urlParamTabLink-color-active;
+        }
+    }
+}
+
+.urlParamTabs__content {
+    border: 1px solid $urlParamTabLink-border;
+    border-top: none;
+    padding: 2rem;
+    background-color: $urlParamTabLink-bgc-active;
+}

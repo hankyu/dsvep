@@ -1,0 +1,511 @@
+/*--- Menu ---*/
+.filter-condition-wrapper
+{
+    margin: 0px 12px;
+    display: none;
+}
+
+.filter-condition-title
+{
+    margin-bottom: 0px;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.filter-label
+{
+    margin: 0px 12px;
+}
+
+.filter-label li
+{
+    display: inline;
+    margin: 0 2px;
+}
+
+.filter-button,
+.filter-button:hover,
+.filter-button:active,
+.filter-button:focus
+{
+    background-color: rgba(0,0,0,0);
+}
+
+.filter-button,
+.filter-button:hover,
+.filter-button:active,
+.filter-button:focus,
+.clear-filter-btn,
+.clear-filter-btn:active,
+.clear-filter-btn:focus
+{
+    -webkit-box-shadow: none;
+            box-shadow: none;
+}
+
+.filter-button
+{
+    border-radius: 20px;
+    border: 3px solid #89ecda;
+}
+
+.clear-filter-btn,
+.clear-filter-btn:hover,
+.clear-filter-btn:active,
+.clear-filter-btn:focus
+{
+    color: #ffffff;
+}
+
+
+.clear-filter-btn
+{
+    background: #5CB85C;
+}
+
+.clear-filter-btn:hover
+{
+    background-color: #449D44;
+}
+
+
+.menu
+{
+    margin-bottom: 20px;
+    width: auto;
+    user-select: none;
+}
+
+.menu-item,
+.menu-filter-item
+{
+    display: inline-block;
+    margin: 2vh 10px;
+    padding: 0;
+    width: 100px;
+    color: #FFF;
+    cursor: pointer;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    text-align: center;
+    border-radius: 13px;
+}
+
+.menu-item:hover,
+.menu-filter-item:hover
+{
+    color: #FFF;
+}
+
+.menu-item.active,
+.menu-filter-item.active
+{
+    box-shadow: 6px 12px 16px -10px #0004;
+    color: #FFF;
+}
+
+.menu-filter-item
+{
+    background-color: #CCC;
+}
+
+.menu-filter-item.active,
+.menu-filter-item:hover
+{
+    background-color: #FF98AA;
+}
+
+
+.menu-filter-item#span_time
+{
+    width: auto;
+    padding: 0 10px;
+}
+/* --- Filter wrapper --- */
+
+.area,
+.category,
+.teacher,
+.type
+{
+    width: auto;
+    min-width: 100px;
+    padding: 0 5px;
+}
+
+.area-wrapper,
+.category-wrapper,
+.teacher-wrapper,
+.type-wrapper
+{
+    display: none;
+    position: relative;
+    padding: 0 15px;
+    background: #FFF;
+    border-radius: 5px;
+    box-shadow: 0 0 12px -5px #262626;
+}
+
+.icon-close
+{
+    padding: 0 10px;
+    cursor: pointer;
+    line-height: normal;
+    text-align: right;
+    opacity: .6;
+}
+
+.icon-close:hover
+{
+    opacity: 1;
+}
+
+.area-card,
+.category-card,
+.hot-teacher-card,
+.teacher-card,
+.type-card
+{
+    margin-bottom: 6px;
+}
+
+.area-card:hover,
+.category-card:hover,
+.hot-teacher-card:hover,
+.teacher-card:hover,
+.type-card:hover
+{
+    background: #EEE3;
+}
+
+.area-title,
+.category-title,
+.teacher-title,
+.type-title
+{
+    display: block;
+    color: #619BB2;
+    font-weight: bold;
+    text-align: right;
+}
+
+.area-item,
+.category-item,
+.teacher-item,
+.type-item
+{
+    cursor: pointer;
+}
+
+.area-item:hover,
+.category-item:hover,
+.teacher-item:hover,
+.type-item:hover
+{
+    background: #EEED;
+}
+
+.area-item i,
+.category-item i,
+.teacher-item i,
+.type-item i
+{
+    margin-right: 10px;
+    background-color: #cccccc;
+    color: #cccccc;
+}
+
+.area-item.select-item i,
+.category-item.select-item i,
+.teacher-item.select-item i,
+.type-item.select-item i
+{
+    background-color: #5DC0DE;
+    color: #ffffff;
+}
+
+.teacher-more-card #more_teachers
+{
+    cursor: pointer;
+}
+
+.teacher-more-card #more_teachers:hover
+{
+    background-color: #cccccc;
+}
+
+.time_selector
+{
+    display: inline-block;
+    width: auto;
+}
+
+.cancel_filter
+{
+    margin-left: 5px;
+}
+
+/* --- All Lesson --- */
+.item-none
+{
+    margin: 0 auto;
+    background: #D9534F55;
+    border: 1px solid #EEE;
+    border-radius: 4px;
+    box-shadow: 3px 3px 12px -5px #0004;
+    text-align: center;
+}
+
+.loading-lesson
+{
+    margin: 0 auto;
+    background: #FFF;
+    border: 1px solid #EEE;
+    border-radius: 4px;
+    box-shadow: 3px 3px 12px -5px #0004;
+    text-align: center;
+}
+
+.loaded-all-lesson
+{
+    display: flex;
+    justify-content: center;
+}
+
+.loaded-text
+{
+    background-color: #ffffff;
+    text-align: center;
+    white-space: nowrap;
+    width: 150px;
+}
+
+.loaded-all-lesson::after
+{
+    z-index: -1;
+    position: absolute;
+    margin: 22px auto 0 auto;
+    width: 100%;
+    border-bottom: 2px solid #cccccc;
+    content: "";
+}
+
+.bg-default
+{
+    background: #FF98AAA0;
+}
+
+.bg-default:hover,
+.bg-default.active
+{
+    background: #FF98AA;
+}
+
+.bg-cyan
+{
+    background: #5DC0DE;
+}
+
+.bg-cyan:hover,
+.bg-cyan.active
+{
+    background: #31B0D5;
+}
+
+.bg-popular
+{
+    background: #F0AD4EA0;
+}
+
+.bg-popular:hover,
+.bg-popular.active
+{
+    background: #F0AD4E;
+}
+
+.bg-price
+{
+    background: #5CB85CA0;
+}
+
+.bg-price:hover,
+.bg-price.active
+{
+    background: #5CB85C;
+}
+
+.bg-no-vacancy
+{
+    background: #d9534f;
+}
+
+.bg-fundraising:hover,
+.bg-fundraising.active
+{
+    background: #FF98AA;
+}
+
+.thumbnail
+{
+    box-shadow: 3px 3px 12px -5px #0004;
+}
+
+.thumbnail:hover
+{
+    box-shadow: 3px 3px 16px -5px #000C;
+}
+
+.figure
+{
+    position: relative;
+}
+
+.img-wrapper
+{
+    height: 180px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.img-wrapper img
+{
+    width: 100%;
+}
+
+.avatar-wrapper
+{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 60px;
+    padding: 3px;
+    background: #FFF;
+    border-radius: 50%;
+    box-shadow: 0 0 12px -5px #000;
+    overflow: hidden;
+}
+
+.avatar-wrapper .avatar
+{
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.avatar-wrapper .avatar:hover
+{
+    transform: scale(1.05);
+}
+
+.caption
+{
+    padding: 0;
+    overflow: hidden;
+    font-size: 2rem;
+    line-height: 2rem;
+    text-align: center;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.caption .price
+{
+    color: #FF4b68;
+}
+
+.caption .no-discount
+{
+    position: absolute;
+    margin-left: 5px;
+    font-size: 12px;
+    text-decoration: line-through;
+}
+
+.lesson-type-label
+{
+    position: absolute;
+    z-index: 10;
+}
+
+.lesson-type
+{
+    padding: 0 10px;
+    color: #FFF;
+    box-shadow: 3px 5px 10px -5px #0009;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.lesson-type.bg-entity::before
+{
+    content: '實體';
+}
+
+.bg-online
+{
+    background: #5DC0DE;
+}
+
+.lesson-type.bg-online::before
+{
+    content: '線上';
+}
+
+.bg-graduation
+{
+    background: #999A;
+}
+
+.lesson-start
+{
+    background: #5CB85C;
+}
+
+@media (max-width: 767.99px)
+{
+    .menu
+    {
+        width: fit-content;
+    }
+
+    .menu-item,
+    .menu-filter-item
+    {
+        margin: 2vh 5px;
+        padding: 0 10px;
+        width: 100px;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .type-wrapper
+    {
+        margin-bottom: 20px;
+    }
+
+    .teacher-wrapper
+    {
+        margin-bottom: 20px;
+    }
+
+    .category-wrapper
+    {
+        margin-bottom: 20px;
+    }
+
+    .category-title
+    {
+        text-align: center;
+    }
+
+    .area-wrapper
+    {
+        margin-bottom: 20px;
+    }
+
+    .area-title
+    {
+        text-align: center;
+    }
+}

@@ -1,0 +1,124 @@
+.indent-10
+{
+    margin-left: 10px;
+}
+
+.lesson-type-menu
+{
+    display: inline-block;
+    padding: 0 10px;
+}
+
+.menu-btn
+{
+    color: #FFF;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    opacity: .4;
+    box-shadow: 0 0 12px -5px #26262666;
+}
+
+.menu-btn:hover
+{
+    color: #FFF;
+    opacity: 1;
+}
+
+.menu-btn.active
+{
+    color: #FFF;
+    opacity: 1;
+    box-shadow: 0 0 12px -4px #000;
+}
+
+.bg-all
+{
+    background: #FF98AA;
+}
+
+.bg-entity
+{
+    background: #EAD24C;
+}
+
+.bg-online
+{
+    background: #5DC0DE;
+}
+
+.bg-cancel
+{
+    background: #E22;
+}
+
+.icon-wrapper
+{
+    position: relative;
+}
+
+.clear-date
+{
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+    transform: translate(50%, 50%);
+    opacity: .6;
+}
+
+.clear-date:hover
+{
+    opacity: 1;
+}
+
+.cash-unit::before
+{
+    content: 'NT$ ';
+}
+
+.pop-avatar
+{
+    width: 80px;
+    border-radius: 50%;
+}
+
+.pop-lesson-type
+{
+    padding: 0 12px;
+    border-radius: 5px;
+    color: #FFF;
+    opacity: .6;
+}
+
+.pop-lesson-type.bg-entity::before
+{
+    content: '實體';
+}
+
+.pop-lesson-type.bg-online::before
+{
+    content: '線上';
+}
+
+.aLessonName
+{
+    color: #666;
+    text-decoration: underline;
+}
+
+.aLessonName:hover, 
+.aLessonName:active
+{
+    color: #ff4b68;
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 767.98px)
+{
+    .lesson-type-menu
+    {
+        padding: 0 3px;
+    }
+
+}

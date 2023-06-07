@@ -1,0 +1,30 @@
+.default-b-tab-container {
+    border: 1px solid $color-border-primary;
+    border-top: none;
+    background-color: $white;
+    padding: 1rem;
+}
+.default-b-tabs .nav-tabs .nav-link {
+    background-color: $gainsboro;
+    border: 1px solid $color-border-primary;
+    color: $lightgray;
+
+    &:hover,
+    &:active {
+        background-color: darken($gainsboro, 5%);
+        border: 1px solid $color-border-primary;
+    }
+
+    &.active {
+        border: 1px solid $color-border-primary;
+        border-bottom: 1px solid $white;
+        color: $font-primary;
+        background-color: $white;
+
+        &:hover,
+        &:active {
+            border-bottom: 1px solid $white;
+            background-color: $white;
+        }
+    }
+}

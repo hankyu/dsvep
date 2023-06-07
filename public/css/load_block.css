@@ -1,0 +1,33 @@
+.loaded
+{
+  display: flex;
+  justify-content: center;
+}
+
+.loaded::after
+{
+    border-bottom: 2px solid #cccccc;
+    content: "";
+    margin: 22px auto 0 auto;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+}
+
+.loaded-text
+{
+    background-color: #ffffff;
+    text-align: center;
+    white-space: nowrap;
+    width: 150px;
+}
+
+.loading
+{
+    background: #FFF;
+    border: 1px solid #DDD;
+    border-radius: 4px;
+    box-shadow: 3px 3px 12px -5px #0004;
+    margin: 0 auto;
+    text-align: center;
+}

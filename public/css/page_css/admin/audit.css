@@ -1,0 +1,37 @@
+.dataTables_wrapper .dataTables_paginate ul.pagination
+{
+    margin: 20px 0 !important;
+}
+
+td
+{
+    word-break: keep-all;
+}
+
+p
+{
+    white-space: pre-wrap;
+    line-height: initial;
+}
+
+.jconfirm-content
+{
+    word-break: break-all;
+    padding-right: 2px;
+    line-height: normal;
+}
+
+.dataTables_length, .dataTables_info
+{
+    float: left;
+}
+
+div.dataTables_wrapper div.dataTables_paginate
+{
+    float: right;
+}
+
+.container-fluid
+{
+    margin-top: 30px;
+}

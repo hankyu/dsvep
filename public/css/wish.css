@@ -1,0 +1,69 @@
+.card:hover
+{
+    box-shadow: 1px 2px 1px rgba(255, 152, 170,0.25), 1px 4px 10px rgba(255, 152, 170,0.22);
+}
+
+.card-body
+{
+    cursor: pointer;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    height: 150px;
+    overflow: hidden;
+}
+
+.card-header
+{
+    background-color: #ff98aa;
+    color: #eee;
+}
+
+.jconfirm-box
+{
+    border-top: 5px solid #ff98aa;
+}
+
+.jconfirm-content-pane
+{
+    height: auto !important;
+    max-height: none !important;
+}
+
+.loading__animation__content
+{
+    display: flex;
+    justify-content: center;
+}
+
+.wish__card__title
+{
+    border-bottom: solid 1px #ff98aa;
+    font-family: Microsoft JhengHei;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 50px;
+}
+
+.wishing__content .card
+{
+    margin-bottom: 12px;
+}
+
+.funcBar
+{
+    padding: 0 20px 20px;
+    text-align: right;
+}
+.funcBar button
+{   
+    background-color: #619bb2;; 
+    width: 100px;
+    color: #FFF;
+    cursor: pointer;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    text-align: center;
+    border-radius: 13px;
+    border: none;
+}

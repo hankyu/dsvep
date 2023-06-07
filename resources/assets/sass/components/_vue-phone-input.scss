@@ -1,0 +1,78 @@
+.vue-phone-number-input {
+    display: block;
+
+    .select-country-container {
+        width: 100%;
+        max-width: 100%;
+
+        .input-country-selector input {
+            border-top-right-radius: $radius-corner !important;
+            border-bottom-left-radius: 0 !important;
+
+            &:focus {
+                border-color: $bs-input !important;
+                box-shadow: $bs-inputShadow;
+            }
+        }
+    }
+    .input-phone-number input {
+        margin-left: 0 !important;
+        margin-top: -1px;
+        border-top-right-radius: 0 !important;
+        border-bottom-left-radius: $radius-corner !important;
+
+        &:focus {
+            border-color: $bs-input !important;
+            box-shadow: $bs-inputShadow !important;
+        }
+    }
+}
+// .loginModal__group--valid {
+.phoneInputGroup--valid {
+    .vue-phone-number-input {
+        .select-country-container {
+            .input-country-selector input {
+                border-color: $bs-inputInvalid !important;
+
+                &:focus {
+                    border-color: $bs-inputValid !important;
+                    box-shadow: $bs-inputValidShadow !important;
+                }
+            }
+        }
+        .input-phone-number input {
+            border-color: $bs-inputValid !important;
+
+            &:focus {
+                border-color: $bs-inputValid !important;
+                box-shadow: $bs-inputValidShadow !important;
+            }
+        }
+    }
+}
+// .loginModal__group--invalid {
+.phoneInputGroup--invalid {
+    .vue-phone-number-input {
+        .select-country-container {
+            .input-country-selector input {
+                border-color: $bs-inputInvalid !important;
+
+                &:focus {
+                    border-color: $bs-inputInvalid !important;
+                    box-shadow: $bs-inputInvalidShadow !important;
+                }
+            }
+        }
+        .input-phone-number input {
+            border-color: $bs-inputInvalid !important;
+
+            &:focus {
+                border-color: $bs-inputInvalid !important;
+                box-shadow: $bs-inputInvalidShadow !important;
+            }
+        }
+    }
+    .loginModal__inputFeedback {
+        display: block;
+    }
+}

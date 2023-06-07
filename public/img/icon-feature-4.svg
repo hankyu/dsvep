@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 150 150" style="enable-background:new 0 0 150 150;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#99D4D9;}
+	.st1{opacity:0.1;fill:#040000;enable-background:new    ;}
+	.st2{fill:#FFFFFF;}
+	.st3{fill:#A6CE5B;}
+	.st4{fill:#A8D7F0;}
+	.st5{fill:#D9C866;}
+	.st6{fill:#EF8484;}
+	.st7{fill:#74C296;}
+	.st8{fill:#ECECEB;}
+	.st9{fill:#ED6E55;}
+	.st10{opacity:0.1;fill:#0F0F0F;enable-background:new    ;}
+</style>
+<g>
+	<rect class="st0" width="150" height="150"/>
+	<polygon class="st1" points="150,74.2 150,150 54.4,150 31.9,127.5 30.6,126.2 30.6,22.5 98.3,22.5 99.4,23.6 118.3,42.5 
+		119.4,43.6 	"/>
+	<g>
+		<g>
+			<polygon class="st2" points="119.4,42.5 119.4,127.5 30.6,127.5 30.6,22.5 99.4,22.5 			"/>
+			<rect x="39" y="37.3" class="st3" width="9.7" height="35.7"/>
+			<rect x="54.6" y="53.3" class="st4" width="9.5" height="19.7"/>
+			<rect x="70.3" y="41.4" class="st5" width="9.5" height="31.6"/>
+			<rect x="85.9" y="48.4" class="st6" width="9.5" height="24.7"/>
+			<rect x="101.5" y="59.1" class="st7" width="9.5" height="14"/>
+			<rect x="39.2" y="80.5" class="st8" width="71.7" height="6.3"/>
+			<rect x="39.2" y="91.3" class="st8" width="71.7" height="6.3"/>
+			<rect x="39.2" y="102" class="st8" width="71.7" height="6.3"/>
+			<rect x="39.2" y="112.8" class="st8" width="71.7" height="6.3"/>
+			<polygon class="st9" points="119.4,42.5 99.4,42.5 99.4,22.5 			"/>
+		</g>
+		<polygon class="st10" points="119.4,42.5 119.4,127.5 75,127.5 75,22.5 99.4,22.5 		"/>
+	</g>
+</g>
+</svg>

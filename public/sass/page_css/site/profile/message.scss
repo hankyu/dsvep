@@ -1,0 +1,405 @@
+@import '../../../base.scss';
+$h_head: 50px;
+$h_input: 48px;
+
+
+.readOrNot
+{
+    font-size: 14px;
+    color: $color-gray;
+}
+
+.from
+{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+#rowMessage {
+    /* -------------------- */
+    /*     Sidebar Page     */
+    /* -------------------- */
+    .message-box
+    {
+        background-color: $color-white;
+        border: 1px solid $color-lightgray;
+        padding: 0;
+        margin-bottom: 20px;
+        height: 550px;
+    
+    
+        .add-message
+        {
+            text-align: right;
+            border-bottom: 1px solid $color-lightgray;
+            width: 100%;
+            padding-right: 10px;
+            height: $h_head;
+        }
+    
+        .all-message-list
+        {
+            overflow-y: auto;
+            height: 480px;
+    
+    
+            .message-list {
+                @include display-flex(flex);
+                @include flex-flow(row nowrap);	// flex-direction:row,row-reverse,column,column-reverse  flex-wrap:nowrap,wrap,wrap-reverse
+                @include justify-content(flex-start);	// flex-start,flex-end,center,space-between,space-around
+                @include align-items(center);	// stretch,center,flex-start,flex-end,baseline
+                padding: 10px;
+                line-height: 1.5;
+        
+                &:hover
+                {
+                    background-color: $color-gainsboro;
+                    cursor: pointer;
+                }
+        
+                .avatar
+                {
+                    width: 50px;
+                    height: 50px;
+                    margin-right: 10px;
+    
+                    .imgAvatar
+                    {
+                        width: 50px;
+                        height: 50px;
+                        display: block;
+                        margin: 0;
+                        padding: 0;
+                        border-radius: 50%;
+                        border: 1px solid $color-lightgray;
+    
+                        &.sys
+                        {
+                            border: none;
+                            text-align: center;
+    
+                            .fas
+                            {
+                                vertical-align: middle;
+                                font-size: 40px;
+                                line-height: 50px;
+                            }
+                        }
+                    }
+                }
+        
+                figcaption
+                {
+                    @include flex(1);	// flex-grow flex-shrink flex-basis
+                    min-width: 0;
+    
+                    .from
+                    {
+                        width: 100%;
+                        overflow:hidden;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                    }
+                    .status
+                    {
+                        color: $color-lightgray;
+                        line-height: 1;
+                    }
+                }
+
+                &.unread
+                {
+                    figcaption
+                    {
+                        .status
+                        {
+                            color: $color-primary;
+                        }
+                    }
+                }
+            }
+            .message-list-active
+            {
+                background-color: $color-gainsboro;
+            }
+        }
+    }
+
+
+    /* -------------------- */
+    /*     Content Page     */
+    /* -------------------- */
+    .message-content
+    {
+        background-color: $color-white;
+        border: 1px solid $color-lightgray;
+        border-left: 0;
+        padding: 0;
+        margin-bottom: 20px;
+        height: 550px;
+
+        .from-bar
+        {
+            border-bottom: 1px solid $color-lightgray;
+            width: 100%;
+            font-size: 20px;
+            font-weight: bold;
+            /* padding-left: 10px; */
+            height: $h_head;
+            text-align: center;
+        }
+
+        .message-content-text
+        {
+            padding: 10px;
+            line-height: 1.5em;
+            overflow-y: auto;
+
+            p
+            {
+                padding: 0 15px 0 0;
+                background: {
+                    position: 45px 12px;
+                    repeat: no-repeat;
+                }
+                margin-bottom: 5px;
+                @include background-size(19px 13px);
+
+                &:after {
+                    content: '';
+                    display: block;
+                    clear: both;
+                }
+
+                .imgAvatar
+                {
+                    border-radius: 50%;
+                    display: inline;
+                    height: 40px;
+                    width: 40px;
+                    border: 1px solid #ccc;
+                    float: left;
+                }
+
+                .fasAvatar
+                {
+                    font-size: 30px;
+                    float: left;
+                    margin: auto 5px;
+                }
+
+                label
+                {
+                    vertical-align: top;
+                    word-wrap: break-word;
+                    font-weight: normal;
+                    line-height: 24px;
+                    padding: 8px 16px;
+                    border-radius: 20px;
+                    max-width: 80%;
+
+                    .fa-external-link-alt
+                    {
+                        font-size: 12px;
+                    }
+                }
+
+                &.receive-detail
+                {
+                    // padding-right: 40px;
+                    background-image: url(/img/talk-bubble-tail.svg);
+
+                    label
+                    {
+                        background-color: $color-gainsboro;
+                        // display: block;
+                        display: inline;
+                        // width: fit-content;
+                        float: left;
+                        // clear: both;
+                        margin-left: 20px;
+                    }
+                }
+
+                &.send-detail
+                {
+                    // padding-left: 80px;
+                    background-image: url(/img/talk-bubble-tail-send.svg);
+                    background-position: 100% 10px;
+
+                    label {
+                        background-color: #FFE3E8;
+                        display: block;
+                        width: fit-content;
+                        float: right;
+                        clear: both;
+                    }
+                }
+            }
+        }
+    }
+
+
+    @media screen and (max-width: $max-w-xs)
+    {
+        /* #rowMessage */
+        position: relative;
+        overflow-x: hidden;
+
+        .message-box
+        {
+            height: auto;
+            margin-bottom: 0;
+            
+            .message-box
+            {
+                height: auto;
+            }
+
+            .all-message-list
+            {
+                height: 50vh;
+
+                .message-list {
+                    .avatar
+                    {
+                        width: 40px;
+                        height: 40px;
+        
+                        .imgAvatar
+                        {
+                            width: 40px;
+                            height: 40px;
+        
+                            &.sys
+                            {
+                                .fas
+                                {
+                                    font-size: 30px;
+                                    line-height: 40px;
+                                }
+                            }
+                        }
+                    }
+            
+                    figcaption
+                    {
+                        line-height: 1.2;
+
+                        .status
+                        {
+                            line-height: 1;
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .message-content
+        {
+            position: absolute;
+            right: 100%;
+            top: 0;
+            height: auto;
+            width: 100%;
+            transition: right ease-in-out .5s;
+            margin-bottom: 0;
+            
+            &.showContent
+            {
+                right: 0;
+            }
+
+            .message-content-text
+            {
+                p
+                {
+                    margin-bottom: 0;
+                    label
+                    {
+                        max-width: 70%;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+.close-message
+{
+    padding: 0 10px;
+    float: left;
+}
+
+
+.message-content-text::-webkit-scrollbar,
+.all-message-list::-webkit-scrollbar,
+.message-input-box textarea::-webkit-scrollbar
+{
+    width: 8px;
+}
+
+.message-content-text::-webkit-scrollbar-track,
+.all-message-list::-webkit-scrollbar-track,
+.message-input-box textarea::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .5);
+    background-color: $color-white;
+}
+
+.message-content-text::-webkit-scrollbar-thumb,
+.all-message-list::-webkit-scrollbar-thumb,
+.message-input-box textarea::-webkit-scrollbar-thumb
+{
+    background-color: $color-gray;
+    outline: 1px solid slategrey;
+}
+
+.no-sys
+{
+    height: 448px;
+
+    @media screen and (max-width: $max-w-xs)
+    {
+        height: calc(50vh - #{$h_input});
+    }
+}
+
+.sys
+{
+    height: 498px;
+
+    @media screen and (max-width: $max-w-xs)
+    {
+        height: 50vh;
+    }
+}
+
+.message-input-box
+{
+    display: none;
+    border-top: 1px solid $color-lightgray;
+    position: relative;
+}
+
+.message-input-box textarea
+{
+    padding-top: 14px;
+    padding-bottom: 10px;
+    padding-right: 66px;
+    height: 48px;
+    border-radius: 0;
+    border: 0;
+    resize: none;
+}
+
+.btn-send
+{
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translate(0, -50%);
+}

@@ -1,0 +1,66 @@
+.skeleton
+{
+    background: #ddd;
+    overflow: hidden;
+    position: relative;
+}
+
+.skeleton::after
+{
+    animation: progress 1s ease-in-out infinite;
+    background: linear-gradient(90deg, #ddd, #eee, #ddd);
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+@keyframes progress
+{
+    0%
+    {
+        transform: translate3d(-100%, 0, 0);
+    }
+    100%
+    {
+        transform: translate3d(100%, 0, 0);
+    }
+}
+
+.skeleton__caption
+{
+    height: 24px;
+    margin: 10px 10%;
+}
+
+.skeleton__heading
+{
+    display: flex;
+    justify-content: center;
+}
+
+.skeleton__text
+{
+    height: 12px;
+    margin: 10px 20%;
+}
+
+.skeleton__thumbnail
+{
+    display: inline-block;
+    width: auto !important;
+}
+
+.skeleton__title .skeleton
+{
+    height: 32px;
+    width: 100px;
+}
+
+.skeleton__figure
+{
+    height: 180px;
+    width: 290px;
+}

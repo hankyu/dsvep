@@ -1,0 +1,49 @@
+.dataTables_wrapper .dataTables_paginate ul.pagination
+{
+    margin: 20px 0 !important;
+}
+
+p
+{
+    line-height: initial;
+}
+
+.img-wrapper
+{
+    width: fit-content;
+    display: inline-block;
+}
+
+.img-wrapper img,
+.img-avatar img
+{
+    border-radius: 50%;
+}
+
+.text-area
+{
+    display: inline-block;
+    vertical-align: top;
+    padding: 10px;
+}
+
+.aLessonName
+{
+    color: #666;
+    text-decoration: underline;
+}
+
+.aLessonName:hover, 
+.aLessonName:active
+{
+    color: #ff4b68;
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 767.99px)
+{
+    .img-wrapper
+    {
+        text-align: center;
+    }
+}

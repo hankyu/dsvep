@@ -1,0 +1,484 @@
+@import '../../../base.scss';
+
+
+$pd-section: 80px;
+$pd-section-xs: 40px;
+$plr-comon: 30px;
+
+$max-w-menu-hide: 830px;
+$max-w-menu-small: 1024px;
+$max-h-menu-small1: 1000px;
+$min-h-menu-small1: 916px;
+$min-h-menu-small2: 831px;
+$max-h-menu-small2: $min-h-menu-small1 - 0.1px;
+$max-h-menu-hide: $min-h-menu-small2 - 0.1px;
+
+$mlr-card-xs: 5%;
+
+.wrapper
+{
+    width: 1140px;
+    margin: auto;
+    
+    @media (max-width: $max-w-md) {
+        width: 940px;
+    }
+    @media (max-width: $max-w-sm) {
+        width: 720px;
+    }
+    @media (max-width: $max-w-xs) {
+        width: auto;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+}
+
+#funcBar
+{
+    text-align: right;
+    padding-bottom: 10px;
+}
+
+#averageBlock
+{
+    @include display-flex(flex);
+    @include flex-flow(row wrap);
+    @include justify-content(center);
+    @include align-items(center);
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 1s ease-in-out;
+    line-height: 1.5;
+
+    &.unfold
+    {
+        max-height: 500px;
+        margin-bottom: 40px;
+    }
+    #averagePresenceChart
+    {
+        width: 400px;
+        height: 200px;
+    }
+    #averagePresenceInfo
+    {
+        margin-left: 40px;
+        font-size: 24px;
+
+        p
+        {
+            margin-bottom: 0;
+            line-height: 2;
+        }
+    }
+
+    @media screen and (max-width: $max-w-sm) {
+        #averagePresenceChart
+        {
+            width: 300px;
+            height: 150px;
+        }
+    }
+    @media screen and (max-width: $max-w-xs) {
+        #averagePresenceChart
+        {
+            width: auto;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        #averagePresenceInfo
+        {
+            margin-left: 0;
+        }
+    }
+}
+
+/* --------------------- */
+/*     Presence Card     */
+/* --------------------- */
+.presenceCard
+{
+
+    .lds-roller div:after {
+        background-color: $color-emphasized3;
+    }
+}
+
+.presenceCard__noData
+{
+    padding-top: 100px;
+    padding-bottom: 200px;
+    text-align: center;
+}
+
+.presenceCard__card
+{
+    position: relative;
+    border: 1px solid $color-lightgray;
+    padding: 20px;
+    box-shadow: 5px 5px $color-lightgray;
+    line-height: 1.5;
+    background-color: $color-white;
+    margin-bottom: 30px;
+    text-align: center;
+    color: $color-darkgray;
+
+    @media (max-width: $max-w-xs) {
+        width: auto;
+        margin-right: $mlr-card-xs;
+        margin-left: $mlr-card-xs;
+        margin-bottom: 20px;
+    }
+}
+
+.aLessonName
+{
+    text-decoration: underline;
+    color: $color-darkgray;
+
+    &:hover,
+    &:active
+    {
+        color: lighten($color-darkgray, 20%);
+        text-decoration: underline;
+    }
+}
+
+.presenceCard__card__lessonName
+{
+    color: inherit;
+    font-size: 24px;
+    line-height: 30px;
+    margin: auto;
+    overflow:hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-weight: bold;
+}
+
+.presenceCard__card__lessonId
+{
+    position: absolute;
+    right: 0;
+    top: 0;
+    line-height: 20px;
+    padding-right: 10px;
+    padding-top: 5px;
+    color: $color-emphasized3;
+
+    &::before
+    {
+        content: '#';
+    }
+}
+
+.presenceCard__card__lessonArea
+{
+    position: relative;
+    font-size: 14px;
+    line-height: 20px;
+    top: -30px;
+}
+
+.presenceCard__card__teacher
+{
+    font-size: 16px;
+    overflow:hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.presenceCard__card__time
+{
+    font-size: 16px;
+}
+
+.presenceCard__card__presenceRate
+{
+    position: relative;
+    margin-top: 10px;
+    height: 110px;
+    font-size: 60px;
+    color: $color-emphasized3;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1;
+
+    .pPresenceRate
+    {
+        font-size: 16px;
+        line-height: 1;
+        margin-bottom: 0;
+    }
+
+    .spnInt
+    {
+        font-size: 1em;
+        line-height: 1;
+    }
+
+    .spnDeci
+    {
+        font-size: 0.5em;
+    }
+
+    .spnPercent
+    {
+        font-size: 0.7em;
+        margin-left: 5px;
+    }
+
+    .noData
+    {
+        font-size: 0.5em;
+    }
+
+}
+
+.detailBtnBar
+{
+    position: absolute;
+    bottom: 5px;
+    text-align: right;
+    right: 20px;
+
+    .btnPresenceData
+    {
+        font-size: 16px;
+        border: none;
+        text-decoration: underline;
+        background-color: transparent;
+        line-height: 1.25;
+        display: block;
+        margin-right: 0;
+        margin-left: auto;
+        text-align: right;
+        font-weight: normal;
+        color: $color-emphasized3;
+
+        &:hover
+        {
+            color: lighten($color-emphasized3, 10);
+        }
+    }
+}
+
+.presenceCard__card__btnCheck
+{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    font-size: 16px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    color: $color-white;
+    font-weight: normal;
+}
+
+.presenceCard__card__btnDetail
+{
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    height: 30px;
+    border: none;
+    background-color: transparent;
+    color: $color-emphasized3;
+    text-decoration: underline;
+}
+
+/* ----------------------------------------- */
+/*     rollcall Table Module for Student     */
+/* ----------------------------------------- */
+$borderColor: $color-lightgray;
+
+/*---- Customize Popup Card ----*/
+.popup__card {
+    width: 1000px;
+
+    .popup__card__body
+    {
+        border-bottom: 1px solid lighten($borderColor, 10);
+        border-top: 1px solid lighten($borderColor, 10);
+    }
+
+    @media (max-width: $max-w-md) {
+        width: 900px;
+    }
+    @media (max-width: $max-w-sm) {
+        width: 650px;
+    }
+    @media (max-width: $max-w-xs) {
+        width: auto;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+}
+
+/* -------------------------------------------------- */
+/*     rollcall Table Module for Teacher & Worker     */
+/* -------------------------------------------------- */
+.tableRollCall__slider
+{
+    width: 100%;
+    overflow-x: auto;
+    border-left: 1px solid $borderColor;
+    border-right: 1px solid $borderColor;
+
+    table
+    {
+        width: 100%;
+        border-collapse: collapse;
+
+        th,
+        td
+        {
+            font-size: 18px;
+            padding: 5px 10px;
+            border: 1px solid $borderColor;
+            text-align: center;
+            line-height: 1.5;
+            vertical-align: middle;
+        }
+
+        thead th
+        {
+            background-color: $color-gainsboro;
+        }
+
+        tbody
+        {
+            tr:nth-child(even)
+            {
+                background-color: #f9f9f9;
+            }
+
+            th
+            {
+                background-color: #fff;
+            }
+        }
+    }
+
+    .fas
+    {
+        font-size: 24px;
+        vertical-align: middle;
+    }
+
+    .fa-check-circle
+    {
+        color: $color-emphasized3;
+    }
+
+    .fa-info-circle
+    {
+        color: $color-gray;
+    }
+
+    .fa-check-circle,
+    .fa-info-circle
+    {
+        &:hover
+        {
+            transform: scale(1.2);
+        }
+    }
+    
+    .fa-times-circle
+    {
+        color: $color-bs-danger;
+    }
+}
+
+/* ------------------------- */
+/*     Worker Scope Only     */
+/* ------------------------- */
+#teacherList
+{
+    text-align: center;
+    padding-bottom: 40px;
+
+    #teacherListFuncBar
+    {
+        text-align: right;
+    
+    }
+    
+    #tbTeacherList
+    {
+        width: 100%;
+        overflow-x: auto;
+        border-right: 1px solid #eee;
+        border-left: 1px solid #eee;
+    }
+    
+
+    .tbTeacherList
+    {
+        width: 100%;
+ 
+        th, td
+        {
+            font-size: 18px;
+            padding: 5px 10px;
+            border: 1px solid $borderColor;
+            text-align: center;
+            line-height: 1.5;
+            vertical-align: middle;
+        }
+    
+        thead
+        {
+            th
+            {
+                background-color: $color-gainsboro;
+            }
+        }
+    }
+}
+
+#lessonList
+{
+    #h3TeacherName
+    {
+        text-align: center;
+        font-size: 23px;
+        margin-bottom: 20px;
+    }
+
+    #lessonListHead
+    {
+        margin-bottom: 10px;
+    
+        &::after
+        {
+            content: '';
+            clear: both;
+            height: 0;
+            overflow: hidden;
+        }
+    }
+
+    #funcBar
+    {
+        float: right;
+        margin-bottom: 0;
+    }
+
+    .returnTeacherList
+    {
+        color: $color-primary;
+        border: none;
+        background-color: transparent;
+        text-decoration: underline;
+    
+        &:hover,
+        &:active
+        {
+            color: darken($color-primary, 5%);
+        }
+    }
+
+}

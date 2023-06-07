@@ -1,0 +1,347 @@
+/* --- Index Page --- */
+.owl-stage-outer
+{
+    padding: 10px;
+}
+
+.owl-stage
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.owl-item
+{
+    margin-left: 10px;
+}
+
+/* --- lesson list --- */
+.lesson-list-container
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    height: 355px;
+}
+
+.lesson-list
+{
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    overflow: hidden;
+    -webkit-user-select: none; /* Safari 3.1+ */
+    -moz-user-select: none; /* Firefox 2+ */
+    -ms-user-select: none; /* IE 10+ */
+    user-select: none; /* Standard syntax */
+}
+
+.lesson-list .item
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 300px;
+    margin: 0px 14px;
+}
+
+.previous_container
+{
+    height: 100%;
+    top: 0px;
+    left: 30px;
+}
+
+.next_container
+{
+    height: 100%;
+    widows: 0px;
+    top: 0px;
+    right: 30px;
+}
+
+.previous_container,
+.next_container,
+.chevron-container
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.previous_btn,
+.next_btn
+{
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    background-color: #ffffffee;
+    border-style: solid;
+    visibility: hidden;
+}
+
+.previous_btn:hover,
+.next_btn:hover
+{
+    background-color: #ffffffff;
+}
+
+.previous_btn:hover i,
+.next_btn:hover i
+{
+    color: #000000;
+}
+
+.move-right,
+.move-left
+{
+    position: absolute;
+    -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+    -webkit-animation-direction: normal; /* Safari 4.0 - 8.0 */
+    animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+}
+
+.move-right
+{
+    -webkit-animation-name: move-right; /* Safari 4.0 - 8.0 */
+    animation-name: move-right;
+}
+
+.loading__animation
+{
+    align-items: center;
+    display: flex;
+    height: 80vh;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes move-right
+{
+    0%   { color: #CCC; right: 12px; }
+    100% { color: transparent; right: 0px; }
+}
+
+/* Standard syntax */
+@keyframes move-right
+{
+    0%   { color: #CCC; right: 12px; }
+    100% { color: transparent; right: 0px; }
+}
+
+.move-left
+{
+    -webkit-animation-name: move-left; /* Safari 4.0 - 8.0 */
+    animation-name: move-left;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes move-left
+{
+    0%   { color: #CCC; left: 12px; }
+    100% { color: transparent; left: 0px; }
+}
+
+/* Standard syntax */
+@keyframes move-left
+{
+    0%   { color: #CCC; left: 12px; }
+    100% { color: transparent; left: 0px; }
+}
+
+.absolute
+{
+    position: absolute;
+}
+
+.round
+{
+    border-radius: 50%;
+}
+
+.thumbnail
+{
+    width: 100%;
+    margin-bottom: 1px;
+    -webkit-box-shadow: 3px 3px 12px -5px #0004;
+    box-shadow: 3px 3px 12px -5px #0004;
+}
+
+.thumbnail:hover
+{
+    -webkit-box-shadow: 3px 3px 16px -5px #000C;
+    box-shadow: 3px 3px 16px -5px #000C;
+}
+
+.figure
+{
+    position: relative;
+}
+
+.img-wrapper
+{
+    height: 180px;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.img-wrapper img
+{
+    width: 100%;
+}
+
+.avatar-wrapper
+{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 60px;
+    padding: 3px;
+    background: #FFF;
+    border-radius: 50%;
+    -webkit-box-shadow: 0 0 12px -5px #000;
+    box-shadow: 0 0 12px -5px #000;
+    overflow: hidden;
+}
+
+.avatar-wrapper .avatar
+{
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.avatar-wrapper .avatar:hover
+{
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
+}
+
+.caption
+{
+    padding: 0;
+    line-height: 2rem;
+    text-align: center;
+    white-space: nowrap;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-size: 2rem;
+}
+
+.caption .price
+{
+    color: #FF4b68;
+}
+
+.lesson-type-label
+{
+    position: absolute;
+    z-index: 10;
+}
+
+.lesson-type
+{
+    padding: 0 10px;
+    line-height: normal;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #FFF;
+    -webkit-box-shadow: 3px 5px 10px -5px #0009;
+    box-shadow: 3px 5px 10px -5px #0009;
+}
+
+.entity
+{
+    background: #EAD24C;
+}
+
+.lesson-type.entity::before
+{
+    content: '實體';
+}
+
+.online
+{
+    background: #5DC0DE;
+}
+
+.lesson-type.online::before
+{
+    content: '線上';
+}
+
+.bg-no-vacancy
+{
+    background: #d9534f;
+}
+
+.lesson-start
+{
+    background: #5CB85C;
+}
+
+.bg-graduation
+{
+    background: #999A;
+}
+
+.more-lesson
+{
+    margin: 0 auto;
+    padding: 5px 85px;
+    background: #D9534FCC;
+    -webkit-box-shadow: 3px 5px 10px -5px #0009;
+    box-shadow: 3px 5px 10px -5px #0009;
+    color: #FFF;
+    font-weight: 600;
+    font-size: 2rem;
+    text-align: center;
+    white-space: nowrap;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.more-lesson:hover
+{
+    background: #D9534F;
+}

@@ -1,0 +1,189 @@
+/**
+ * lesson__card
+ */
+
+.thumbnail
+{
+    box-shadow: 3px 3px 12px -5px #0004;
+}
+
+.thumbnail:hover
+{
+    box-shadow: 3px 3px 16px -5px #000C;
+}
+
+.thumbnail a>img,
+.thumbnail>img
+{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.thumbnail a>img
+{
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+.figure
+{
+    position: relative;
+}
+
+.lesson-type
+{
+    box-shadow: 3px 5px 10px -5px #0009;
+    color: #FFF;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: normal;
+    padding: 0 10px;
+}
+
+.lesson-type-label
+{
+    position: absolute;
+    z-index: 10;
+}
+
+.avatar-wrapper
+{
+    background: #FFF;
+    border-radius: 50%;
+    bottom: 0;
+    box-shadow: 0 0 12px -5px #000;
+    overflow: hidden;
+    padding: 3px;
+    position: absolute;
+    right: 0;
+    width: 60px;
+}
+
+.img-wrapper
+{
+    align-items: center;
+    display: flex;
+    height: 180px;
+    overflow: hidden;
+}
+
+.img-wrapper img
+{
+    width: 100%;
+}
+
+.avatar-wrapper .avatar
+{
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+/* Favorite */
+.card__content__favorite
+{
+    margin-top: 10px;
+}
+
+.card__content__favorite__add__btn
+{
+    background-color: #FFE3E8;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    max-width: 140px;
+    outline: none !important;
+    padding: 5px 18px;
+}
+
+.card__content__favorite__add__btn:hover
+{
+    box-shadow: 4px 4px 15px -5px #000;
+}
+
+.card__content__favorite__add__btn:active
+{
+    background-color: #FFD6DD;
+    box-shadow: 1px 1px 1px 1px #EDC5CC inset;
+}
+
+.card__content__favorite__add__btn i
+{
+    color: #FFA78B;
+    margin-right: 5px;
+}
+
+.card__content__favorite__cancel__btn
+{
+    background-color: #ccc;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    max-width: 140px;
+    outline: none !important;
+    padding: 5px 18px;
+}
+
+.card__content__favorite__cancel__btn:hover
+{
+    box-shadow: 4px 4px 15px -5px #000;
+}
+
+.card__content__favorite__cancel__btn:active
+{
+    background-color: #CCC;
+    box-shadow: 1px 1px 1px 1px #CCC inset;
+}
+
+.card__content__favorite__cancel__btn i
+{
+    margin-right: 5px;
+}
+
+/**
+ * lesson__load
+ */
+.lesson__load__text__none
+{
+    background: #D9534F55;
+    border: 1px solid #EEE;
+    border-radius: 4px;
+    box-shadow: 3px 3px 12px -5px #0004;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.lesson__load__text__loading
+{
+    background: #FFF;
+    border: 1px solid #EEE;
+    border-radius: 4px;
+    box-shadow: 3px 3px 12px -5px #0004;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.lesson__load__text__loaded
+{
+    display: flex;
+    justify-content: center;
+}
+
+.lesson__load__text__loaded::after
+{
+    border-bottom: 2px solid #cccccc;
+    content: "";
+    margin: 22px auto 0 auto;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+}
+
+.loaded-text
+{
+    background-color: #ffffff;
+    text-align: center;
+    white-space: nowrap;
+    width: 150px;
+}

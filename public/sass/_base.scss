@@ -1,0 +1,68 @@
+// /* Welcome to Compass.
+//  * In this file you should write your main styles. (or centralize your imports)
+//  * Import this file using the following HTML or equivalent:
+//  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+ @import "compass/css3";
+
+// --- RWD boundary ---
+$min-w-sm: 768px;
+$min-w-md: 992px;
+$min-w-lg: 1200px;
+$max-w-xs: $min-w-sm - 0.1px;
+$max-w-sm: $min-w-md - 0.1px;
+$max-w-md: $min-w-lg - 0.1px;
+
+$max-w-xxs: 360px;  // iphne 5 等小尺寸裝置
+$max-h-xxs: 750px;  // iphne 5 等小尺寸裝置
+
+// --- color scheme ---
+$colors: (
+    brand-primary: #ff98aa,
+    complementary1: #619bb2,
+    complementary2: #ffe3e8,
+    complementary3: #fffcb7,
+    
+    emphasized1: #ead24c,
+    emphasized2: #ff4b68,
+    emphasized3: #5dc0de,
+    emphasized4: #89ecda,
+    
+    bs-danger: #d9534f,
+    bs-success: #5cb85c,
+    bs-primary: #337ab7,
+    bs-warning: #f0ad4e,
+    
+    black: #000,
+    font-primary: #141414,
+    dark: #262626,
+    darkgray: #666,
+    gray: #999,
+    lightgray: #ccc,
+    gainsboro: #eee,
+    white: #fff
+) !default;
+
+$color-primary: #ff98aa;
+$color-complementary1: #619bb2;
+$color-complementary2: #ffe3e8;
+$color-complementary3: #fffcb7;
+
+$color-emphasized1: #ead24c;
+$color-emphasized2: #ff4b68;
+$color-emphasized3: #5dc0de;
+$color-emphasized4: #89ecda;
+
+$color-bs-danger: #d9534f;
+$color-bs-success: #5cb85c;
+$color-bs-primary: #337ab7;
+$color-bs-warning: #f0ad4e;
+
+$color-black: #000;
+$color-font-primary: #141414;
+$color-dark: #262626;
+$color-darkgray: #666;
+$color-gray: #999;
+$color-lightgray: #ccc;
+$color-gainsboro: #eee;
+$color-white: #fff;

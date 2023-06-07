@@ -1,0 +1,352 @@
+@import "../../../base.scss";
+
+
+$h_nav: 71px;               // 導覽列高度
+$h_page_header: 100px;      // 頁面標題高度
+$fsize_h2: 36px;            // 頁面標題 font-size
+$h_page_header_xs: 70px;    // 頁面標題高度
+$fsize_h2_xs: 24px;         // 頁面標題 font-size
+
+$h_list_header: 48px;       // 主題, 類別標頭高度
+$h_topic_li: 48px;
+$h_topic_li_xs: 30px;
+$fsize_topic_li: 20px;      // 主題, 類別的 font-size
+$fsize_topic_li_xs: 16px;   // 主題, 類別的 font-size
+$lh_topic_li: 24px;         // 主題, 類別的 line-height
+$lh_topic_li_xs: 20px;      // 主題, 類別的 line-height
+$w_edit_btn: 30px;          // 按鈕 width
+$h_edit_btn: $h_topic_li;
+$h_edit_btn_xs: $h_topic_li_xs;
+$pl_topic_li: 10px;
+$pr_topic_li: $w_edit_btn * 2 + 10px;
+
+
+body
+{
+    height: 100%;
+    padding-top: $h_nav;
+}
+
+
+#navigation
+{
+    position: fixed;
+}
+
+
+
+$pt_h2: ($h_page_header - ($fsize_h2 * 1.5)) / 2;
+$pb_h2: $pt_h2;
+$pt_h2_xs: ($h_page_header_xs - ($fsize_h2_xs * 1.5)) / 2;
+$pb_h2_xs: $pt_h2_xs;
+.body-content
+{
+    position: static;
+    min-height: auto;
+    height: 100%;
+
+    .adm_page_header
+    {
+        height: $h_page_header;
+        border-bottom: 1px solid $color-gainsboro;
+
+        .page-title
+        {
+            font-size: $fsize_h2;
+            text-align: center;
+            line-height: 1.5;
+            margin-top: 0;
+            margin-bottom: 0;
+            padding-top: $pt_h2;
+            padding-bottom: $pb_h2;
+        }
+
+        .bar_add_topic
+        {
+            position: relative;
+            text-align: right;
+            height: 0;
+            line-height: 0;
+        
+            #add_topic
+            {
+                position: absolute;
+                bottom: 10px;
+                right: 0;
+                font-size: 20px;
+            }
+        }
+    }
+    @media (max-width:768px)
+    {
+        .adm_page_header
+        {
+            height: $h_page_header_xs;
+
+            .page-title
+            {
+                font-size: $fsize_h2_xs;
+                padding-top: $pt_h2_xs;
+                padding-bottom: $pb_h2_xs;
+            }
+
+            .bar_add_topic
+            {
+                #add_topic
+                {
+                    position: absolute;
+                    bottom: -41px;
+                    right: 0;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+.wrapper {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    height: 100%;
+    @include display-flex(flex);
+    @include flex-flow(column nowrap);
+}
+@media (min-width: 768px){
+    .wrapper {
+        width: 720px;
+    }
+}
+@media (min-width: 992px){
+    .wrapper {
+        width: 940px;
+    }
+}
+@media (min-width: 1200px){
+    .wrapper
+    {
+        width: 1140px;
+    }
+}
+
+
+$pt_topic_li: ($h_topic_li - $lh_topic_li) / 2;
+$pb_topic_li: $pt_topic_li;
+$pt_topic_li_xs: ($h_topic_li_xs - $lh_topic_li_xs) / 2;
+$pb_topic_li_xs: $pt_topic_li_xs;
+
+.adm_page_content {
+    @include flex(1);
+    padding: 40px;
+    text-align: center;
+}
+
+.topic_scroller_xs {
+    height: 100%;
+}
+@media (max-width:768px){
+    .adm_page_content {
+        padding: 50px 0 85px;
+    }
+    .topic_scroller_xs {
+        border-right: 1px solid $color-gray;
+        border-left: 1px solid $color-gray;
+        overflow-x: hidden;
+        position: relative;
+    }
+} 
+
+#topic_area
+{   
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    min-width: 500px;
+    max-width: 736px;
+    border: 1px solid $color-gray;
+
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+    .topic_list,
+    .category_list
+    {
+        @include display-flex(flex);
+        @include flex-flow(column wrap);
+        @include justify-content(flex-start);
+        height: 100%;
+        text-align: left;
+        position: relative;
+
+        header
+        {   
+            text-align: center;
+            background-color: $color-lightgray;
+            border-top: 1px solid $color-lightgray;
+            border-bottom: 1px solid $color-gray;
+            font-size: 20px;
+            height: $h_list_header;
+
+            button
+            {
+                display: none;
+            }
+        }
+    }
+    .topic_list {
+        width: 50%;
+        border-right: 1px solid $color-gray;
+        float: left;
+    }
+    .category_list {
+        width: 50%;
+        float: right;
+    }
+
+    @media (max-width:768px)
+    {
+        .topic_list,
+        .category_list
+        {
+            header
+            {   
+                position: relative;
+                button {
+                    position: absolute;
+                    width: 40px;
+                    height: 100%;
+                    line-height: $h_list_header - 2px;  // 減掉 border 寬
+                    background-color: transparent;
+                    border: none;
+                    cursor: pointer;
+                    display: block;
+                    top: 0;
+                }
+            }
+        }
+        .topic_list {
+            header
+            {
+                button
+                {
+                    text-align: right;
+                    padding-right: 10px;
+                    right: 0;
+                }
+            }
+        }
+        .category_list {
+            header
+            {
+                button
+                {
+                    text-align: left;
+                    padding-left: 10px;
+                    left: 0;
+                }
+            }
+        }
+    }
+    .ul_topic,
+    .ul_category
+    {
+        width: 100%;
+        display: block;
+        margin-bottom: 0;
+        font-size: $fsize_topic_li;
+
+        li
+        {
+            width: 100%;
+            padding: $pt_topic_li $pr_topic_li $pb_topic_li $pl_topic_li;
+            position: relative;
+            line-height: $lh_topic_li;
+            overflow: hidden;
+            &:hover {
+                background-color: $color-complementary3;
+            }
+            &.active {
+                background-color: $color-emphasized1;
+            }
+
+            .btn_edit,
+            .btn_del  {
+                position: absolute;
+                width: $w_edit_btn;
+                height: $h_edit_btn;
+                top: 0;
+                text-align: center;
+                background-color: transparent;
+                border: none;
+
+                &:hover {
+                    color: $color-black;
+                }
+            }
+
+            .btn_edit {
+                right: 35px;
+            }
+
+            .btn_del {
+                right: 5px;
+            }
+
+        }
+    }
+
+    .ul_topic,
+    .category_container
+    {
+        @include flex(1);
+        overflow-y: auto;
+
+        .ul_category {
+            display: none;
+
+            &.active {
+                display: block;
+            }
+        }
+
+    }
+}
+@media (max-width: 768px)
+{
+    #topic_area
+    {
+        position: absolute;   
+        left: 0;
+        border-left: none;
+        border-right: none;
+
+        .ul_topic,
+        .ul_category
+        {
+            font-size: $fsize_topic_li_xs;
+
+            li
+            {
+                padding-top: $pt_topic_li_xs;
+                padding-bottom: $pb_topic_li_xs;
+                line-height: $lh_topic_li_xs;
+
+                .btn_edit,
+                .btn_del  {
+                    height: $h_topic_li_xs;
+                }
+            }
+        }
+    }
+}
+
+
+footer
+{
+    height: 0;
+    min-height: auto;
+    overflow: hidden;
+    padding-top: 0;
+}

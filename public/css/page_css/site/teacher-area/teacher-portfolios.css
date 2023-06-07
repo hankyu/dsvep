@@ -1,0 +1,126 @@
+[data-text]:empty:not(:focus):before
+{
+    color: #aaa;
+    content: attr(data-text);
+}
+
+.btn-default:hover
+{
+    background-color: #fff;
+    border-color: #aaa;
+}
+
+.card-body
+{
+    line-height: 30px;
+    padding: 10px;
+}
+
+.portfolios__body *
+{
+    display: block;
+}
+
+.portfolios__body img
+{
+    max-width: 100%;
+}
+
+.portfolios__edit__btn
+{
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+.portfolios__edit__btn__group
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.edit__buttons
+{
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.edit__buttons div,
+.edit__buttons label
+{
+    margin-right: 10px;
+}
+
+.edit__icon
+{
+    background-color: #bae1ff;
+    border: 1px solid #fff;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 12px;
+    z-index: 2;
+}
+
+.edit__text
+{
+    background-color: #bae1ff;
+    border: 1px solid #fff;
+    border-radius: 25px;
+    margin-left: -13px;
+    padding: 2px 14px;
+    z-index: 1;
+}
+
+.edit__preview
+{
+    height: 35vh;
+    margin-top: 10px;
+    overflow-y: auto;
+}
+
+.edit__textarea
+{
+    height: 35vh;
+    padding: 10px;
+    resize: none;
+    width: 100%;
+}
+
+.portfolios__edit
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    line-height: 2rem;
+}
+
+@media screen and (max-width: 576px)
+{
+    .portfolios__edit
+    {
+        display: block;
+    }
+}

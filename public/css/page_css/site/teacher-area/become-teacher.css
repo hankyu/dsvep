@@ -1,0 +1,426 @@
+.navbar-default {
+  background-color: transparent;
+}
+
+.nav.navbar-nav {
+  background-color: transparent;
+}
+
+.section-default, .section-gainsboro, #summary .section-slogan, #summary .section-diagram, #summary #features {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+@media (max-width: 767.9px) {
+  .section-default, .section-gainsboro, #summary .section-slogan, #summary .section-diagram, #summary #features {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+.section-gainsboro, #summary .section-slogan, #summary .section-diagram {
+  background-color: #eee;
+}
+
+#summary {
+  position: relative;
+  z-index: 120;
+  display: none;
+}
+#summary.active {
+  display: block;
+}
+#summary .header-pic {
+  height: 640px;
+  background-color: transparent;
+  background-image: url(../../../../img/background/bg-becom-teacher.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+#summary .header-pic .animatedParent {
+  width: 100%;
+  height: 100%;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: #0003;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: column wrap;
+  flex-flow: column wrap;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+#summary .header-pic .animatedParent .header-content {
+  display: inline-block;
+  line-height: 2;
+  max-width: 100%;
+}
+#summary .header-pic .page-title {
+  font-size: 40px;
+  letter-spacing: 12px;
+  font-weight: 900;
+  color: #fff;
+  text-shadow: 3px 4px 3px black;
+}
+@media (max-width: 991.9px) {
+  #summary .header-pic {
+    height: 560px;
+  }
+}
+@media (max-width: 767.9px) {
+  #summary .header-pic {
+    height: 320px;
+  }
+  #summary .header-pic .animatedParent {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  #summary .header-pic .page-title {
+    font-size: 30px;
+    letter-spacing: normal;
+  }
+  #summary .header-pic .btn-create {
+    font-size: 20px;
+  }
+}
+#summary .header-pic.header-pic-fail {
+  height: auto;
+}
+#summary .header-pic.header-pic-fail .animatedParent {
+  padding: 15vh 30px;
+}
+#summary .header-pic.header-pic-fail .article-fail-reason {
+  padding: 30px;
+  max-width: 700px;
+  background-color: #fffc;
+  text-align: left;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -moz-box-shadow: 3px 4px 10px -5px black;
+  -webkit-box-shadow: 3px 4px 10px -5px black;
+  box-shadow: 3px 4px 10px -5px black;
+}
+#summary .header-pic.header-pic-fail .article-fail-reason p,
+#summary .header-pic.header-pic-fail .article-fail-reason ol {
+  color: #141414;
+  font-size: 16px;
+}
+#summary .header-pic.header-pic-fail .article-fail-reason ol {
+  display: inline-block;
+  text-align: left;
+  margin-left: 25px;
+  list-style-type: decimal;
+}
+#summary .header-pic.header-pic-fail .article-fail-reason p:last-child {
+  margin-bottom: 0;
+}
+@media (max-width: 991.9px) {
+  #summary .header-pic.header-pic-fail {
+    height: auto;
+  }
+  #summary .header-pic.header-pic-fail .animatedParent {
+    padding: 30px 30px;
+  }
+}
+@media (max-width: 767.9px) {
+  #summary .header-pic.header-pic-fail {
+    height: auto;
+  }
+}
+#summary p.p-over-bgim {
+  font-size: 24px;
+  font-weight: 400;
+  color: #fefefe;
+  text-shadow: 2px 3px 3px black;
+}
+@media (max-width: 767.9px) {
+  #summary p.p-over-bgim {
+    font-size: 18px;
+    text-shadow: 2px 3px 2px black;
+  }
+}
+#summary .btn-become-teacher-introduce,
+#summary #btn_here_refuel {
+  color: #fff;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  background: #ff98aa;
+  border: none;
+  line-height: 1.5;
+  padding: 10px 20px;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  -webkit-box-shadow: 3px 3px 5px 0 #0006;
+  -moz-box-shadow: 3px 3px 5px 0 #0006;
+  box-shadow: 3px 3px 5px 0 #0006;
+  font-weight: bold;
+  font-size: 20px;
+}
+#summary .btn-become-teacher-introduce:hover, #summary .btn-become-teacher-introduce:focus,
+#summary #btn_here_refuel:hover,
+#summary #btn_here_refuel:focus {
+  background: #e89;
+}
+#summary .section-slogan {
+  text-align: center;
+  font-size: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+@media (max-width: 767.9px) {
+  #summary .section-slogan {
+    font-size: 18px;
+    line-height: 1.8;
+  }
+}
+#summary #features .feature-card {
+  padding: 20px;
+}
+#summary #features .feature-card .feature-icon {
+  margin: auto;
+  width: 60%;
+  max-width: 160px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  overflow: hidden;
+}
+#summary #features .feature-card h3 {
+  font-size: 24px;
+  line-height: 1.5;
+  margin-top: 15px;
+  margin-bottom: 0;
+}
+#summary #features .feature-card p {
+  line-height: 1.5;
+  margin: 0;
+  font-size: 16px;
+}
+#summary #features .feature-card p + p {
+  margin-top: 10px;
+}
+#summary #features .feature-card p.feature-sub-title {
+  color: #141414;
+  text-align: center;
+}
+@media (max-width: 991.9px) {
+  #summary #features .feature-card {
+    padding: 60px;
+  }
+}
+@media (max-width: 767.9px) {
+  #summary #features .feature-card {
+    padding: 40px;
+  }
+}
+#summary .section-diagram {
+  text-align: center;
+}
+#summary .section-diagram img {
+  margin: auto;
+  width: 374px;
+}
+@media (max-width: 767.9px) {
+  #summary .section-diagram img {
+    width: 80%;
+    max-width: 300px;
+  }
+}
+#summary .section-become-teacher {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  padding-right: 30px;
+  padding-left: 30px;
+  background-color: transparent;
+  background-image: url(/img/background/bg-becom-teacher2.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+  text-align: center;
+}
+#summary .section-become-teacher p.p-over-bgim {
+  margin-top: 40px;
+}
+
+#fill_page {
+  display: none;
+}
+#fill_page.active {
+  display: block;
+}
+
+.textarea-error {
+  border-color: #A94442;
+}
+.textarea-error:focus {
+  border-color: #843534;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #CE8483;
+}
+
+.has-feedback .form-control-feedback {
+  top: 0;
+  right: 20px;
+  z-index: 100;
+}
+
+.become-teacher-profile-content {
+  padding-top: 20px;
+}
+
+.become-teacher-menu {
+  position: fixed;
+  top: calc(20px + 78px);
+  z-index: 100;
+}
+@media (max-width: 1024px) {
+  .become-teacher-menu {
+    left: 3vw;
+    display: none;
+  }
+}
+.become-teacher-menu li {
+  float: none;
+  display: flex;
+}
+@media (max-height: 830px) {
+  .become-teacher-menu {
+    display: none;
+  }
+}
+.become-teacher-menu .become-teacher-menu-item {
+  height: 40px;
+  padding: 0 30px;
+  margin: 5px;
+  display: flex;
+  align-items: center;
+  background: #FFE3E8;
+  border-radius: 25px;
+  cursor: pointer;
+}
+.become-teacher-menu .become-teacher-menu-item:hover, .become-teacher-menu .become-teacher-menu-item.active {
+  transform: translateX(-1vw);
+  background: #FF98AA;
+}
+.become-teacher-menu .become-teacher-menu-item:hover span, .become-teacher-menu .become-teacher-menu-item.active span {
+  color: #FFF;
+}
+.become-teacher-menu .become-teacher-menu-item.active a {
+  background-color: unset !important;
+}
+.become-teacher-menu .become-teacher-menu-item a {
+  padding: 0 !important;
+  margin: 0 auto;
+}
+.become-teacher-menu .become-teacher-menu-item span {
+  line-height: normal;
+  display: block;
+  font-size: 2rem;
+  color: #666;
+}
+@media (max-height: 1000px) and (min-height: 916px) {
+  .become-teacher-menu .become-teacher-menu-item {
+    height: 33px;
+    margin: 3px;
+  }
+}
+@media (max-height: 915.9px) and (min-height: 831px) {
+  .become-teacher-menu .become-teacher-menu-item {
+    height: 28px;
+    margin: 2px;
+  }
+}
+
+#profile {
+  position: relative;
+}
+#profile .become-teacher-card {
+  padding: 20px;
+  margin-bottom: 100px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px -3px #262626;
+  background: #FFF;
+}
+@media (max-width: 767px) {
+  #profile .become-teacher-card {
+    margin-bottom: 5vh;
+  }
+}
+#profile .become-teacher-btn-wrapper {
+  margin-bottom: 10vh;
+}
+
+#education > div {
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 767px) {
+  #education > div {
+    display: block;
+  }
+}
+
+@media (max-width: 767px) {
+  .btn.btn-info {
+    width: 100%;
+  }
+}
+@media (max-width: 992px) {
+  .apply-content div {
+    font-size: 20px;
+  }
+}
+.auditing-img {
+  width: 100vw;
+  height: 70vh;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.auditing-img img {
+  height: 50vmin;
+}
+
+.treaty .jconfirm-content {
+  max-height: 50vh;
+  border: 1px solid #eee;
+}
+
+.policy-container {
+  padding-left: 10px;
+  padding-right: 10px;
+  line-height: 1.5;
+}
+.policy-container h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.policy-container h4 {
+  font-size: 16px;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+.policy-container ul {
+  list-style-type: disc;
+  margin-left: 25px;
+  list-style-position: outside;
+}

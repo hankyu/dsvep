@@ -1,0 +1,459 @@
+/*--------------------*/
+/*     parameters     */
+/*--------------------*/
+$font-color: #666;
+$font-size: 16px;
+$font-size-xs: 14px;
+$border-color: #aaa;
+$h-search_input: 30px;
+$pdlr-text_input: 5px;
+
+/* thead */
+$bgc-thead: #ccc;
+
+/* th */
+$font-size-th: $font-size;
+$lh-th: 1.5;
+$pd-th: 5px;
+$font-size-sort_mark: 14px;
+/* sort mark */
+$w-sort_mark: 18px;
+$h-sort_mark: 18px;
+$t-sort_mark: ($font-size-th * $lh-th + $pd-th * 2 - $h-sort_mark) / 2;
+$opacity-sort_mark: 0.2;
+$opacity-sort_mark-active: 0.5;
+
+/* td */
+$font-size-td: $font-size-th;
+$font-size-td-xs: $font-size-xs;
+$lh-td: $lh-th;
+$pd-td: $pd-th;
+/* fold btn */
+$h-fold_btn: 20px;
+$w-fold_btn: $h-fold_btn;
+$bgc-fold_btn: #5DC0DE;
+$bgc-fold_btn-open: #FF4B68;
+$darken-fold_btn: 10%;
+$fsize-fold_btn: 16px;
+
+/* page switcher */
+$bdc-page_group: $border-color;
+$fsz-page_btn: 16px;
+$bgc-page_btn: #fff;
+$h-page_btn: $h-search_input;
+$h-page_input: $h-search_input;
+
+/* foldable tr */
+$bgc-foldable_tr: #f5f5f5;
+/* foldable td */
+$fsz-foldable: $font-size-td;
+$fsz-foldable-xs: $font-size-td-xs;
+
+
+/*-------------------*/
+/*     Font Face     */
+/*-------------------*/
+/* @font-face
+{
+    font-family: 'Glyphicons Halflings';
+    src: url(../fonts/glyphicons-halflings-regular.eot);
+    src: url(../fonts/glyphicons-halflings-regular.eot)
+            format('embedded-opentype'),
+        url(../fonts/glyphicons-halflings-regular.woff2)
+            format('woff2'),
+        url(../fonts/glyphicons-halflings-regular.woff)
+            format('woff'),
+        url(../fonts/glyphicons-halflings-regular.ttf)
+            format('truetype'),
+        url(../fonts/glyphicons-halflings-regular.svg)
+            format('svg');
+} */
+
+
+.rwdTableModule__header,
+.rwdTableModule__containerSlider,
+.rwdTableModule__footer
+{
+    box-sizing: border-box;
+    font-color: $font-color;
+    line-height: 1.5;
+
+    * {
+        box-sizing: border-box;
+    }
+}
+
+
+/*--------------------*/
+/*     text-align     */
+/*--------------------*/
+.text-left {
+    text-align: left;
+}
+.text-right {
+    text-align: right;
+}
+.text-center {
+    text-align: center;
+}
+
+
+/*-----------------------*/
+/*                       */
+/*     Module Header     */
+/*                       */
+/*-----------------------*/
+.rwdTableModule__header {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    line-height: 3;
+
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+    .rwdTableModule__rowsPerPageGroup
+    {
+        float: left;
+    }
+    .rwdTableModule__inputSearch
+    {
+        height: $h-search_input;
+        margin-left: 5px;
+        border: 1px solid $border-color;
+        border-radius: 5px;
+        padding-left: $pdlr-text_input;
+        padding-right: $pdlr-text_input;
+    }
+    .rwdTableModule__spnSearch
+    {
+        float: right;
+    }
+}
+
+
+/*--------------------------*/
+/*                          */
+/*     Container Slider     */
+/*                          */
+/*--------------------------*/
+.rwdTableModule__containerSlider
+{
+    width: 100%;
+    border: 1px solid $border-color;
+    border-top: none;
+    font-size: $font-size;
+    overflow-x: auto;
+}
+
+.rwdTableModule__containerSlider *:focus
+{
+    outline: none;
+}
+
+
+/*---------------*/
+/*     table     */
+/*---------------*/
+.rwdTableModule__table {
+    width: 100%;
+    border-collapse: collapse;
+
+    thead {
+        background-color: $bgc-thead;
+    }
+}
+
+
+/*----------------*/
+/*     td, th     */
+/*----------------*/
+.rwdTableModule__td,
+.rwdTableModule__th {
+    border: 1px solid $border-color;
+}
+
+/* ----- th ----- */
+.rwdTableModule__th
+{
+    white-space: nowrap;
+    padding: $pd-th;
+    text-align-last: left;
+    font-size: $font-size-th;
+
+    &.rwdTableModule__th--sortable
+    {
+        position: relative;
+        padding-right: 28px;
+        cursor: pointer;
+
+        &:after {
+            font-family: 'Glyphicons Halflings';
+            position: absolute;
+            top: $t-sort_mark;
+            right: $pd-th;
+            width: $w-sort_mark;
+            height: $h-sort_mark;
+            opacity: $opacity-sort_mark;
+            content: "\e150";
+            display: block;
+            font-size: $font-size-sort_mark;
+            line-height: $h-sort_mark;
+            text-align: center;
+        }
+
+        &.rwdTableModule__th--sorting:after {
+            opacity: $opacity-sort_mark-active;
+            content: "\e155";
+        }
+        &.rwdTableModule__th--sorting-desc:after {
+            content: "\e156";
+        }
+    }
+}
+
+/* ----- td ----- */
+.rwdTableModule__td
+{
+    padding: $pd-td;
+    font-size: $font-size-td;
+    line-height: $lh-td;
+
+    @media (max-width: 767.9px){
+        font-size: $font-size-td-xs;
+    }
+}
+/* no data */
+.rwdTableModule__noData {
+    text-align: center;
+    color: #262626;
+}
+
+
+
+
+
+/* ----- rwd mode 0 ----- */
+.rwdTableModule__containerSlider-rwdMode-0
+{
+    width: 100%;
+
+    tbody
+    {
+        .rwdTableModule__tr:nth-child(even) {
+            background-color: #f5f5f5;
+        }
+        .rwdTableModule__td
+        {
+            white-space: nowrap;
+        }
+    }
+}
+
+/* ----- rwd mode 1 ----- */
+.rwdTableModule__containerSlider-rwdMode-1
+{
+    tbody
+    {
+        .rwdTableModule__tr:nth-child(even) {
+            background-color: #f5f5f5;
+        }
+        .rwdTableModule__td
+        {
+            white-space: nowrap;
+        }
+    }
+
+    .rwdTableModule__tr
+    {
+        /* Fold Button */
+        .rwdTableModule__foldBtn
+        {
+            position: absolute;
+            margin: auto;
+            top: 0;
+            bottom: 0;
+            left: $pd-td;
+            width: $w-fold_btn;
+            height: $h-fold_btn;
+            display: none;
+            border: none;
+            border-radius: 50%;
+            background-color: $bgc-fold_btn;
+
+            &:after
+            {
+                content: '+';
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: $w-fold_btn;
+                height: $h-fold_btn;
+                font-size: $fsize-fold_btn;
+                line-height: $h-fold_btn;
+                color: #fff;
+            }
+            &:hover,
+            &:active
+            {
+                background-color: darken($bgc-fold_btn, $darken-fold_btn);
+            }
+        }
+
+        &.opened
+        {
+            .rwdTableModule__foldBtn
+            {
+                background-color: $bgc-fold_btn-open;
+                &:after {
+                    content: '-';
+                }
+            }
+
+        }
+    }
+
+    /* foldable TR */
+    .rwdTableModule__foldable_tr
+    {
+        display: none;
+        background-color: $bgc-foldable_tr;
+
+        td {
+            padding: 5px;
+            padding-left: 20px;
+            border-right: 1px solid $border-color;
+            border-left: 1px solid $border-color; 
+            box-shadow: inset 0 3px 3px 0 darken($bgc-foldable_tr, 10%);
+            font-size: $fsz-foldable;
+
+            @media (max-width: 767.9px) {
+                font-size: $fsz-foldable-xs;
+            }
+
+            div
+            {
+                padding: 2px 0;
+            }
+        }
+    }
+
+    .rwdTableModule__tr.opened+.rwdTableModule__foldable_tr
+    {
+        display: table-row;
+    }
+
+
+    /* tighten status */
+    &.tighten
+    {
+        tbody
+        {
+            .rwdTableModule__tr:nth-child(even) {
+                background-color: #fff;
+            }
+        }
+        .rwdTableModule__td:nth-child(1)
+        {
+            position: relative;
+            padding-left: $w-fold_btn + $pd-td;
+        }
+        .rwdTableModule__foldBtn
+        {
+            display: block;
+        }
+        .tightenedColumn-foldable-hidden
+        {
+            display: none;
+        }
+    }
+}
+
+
+
+/*-----------------------*/
+/*                       */
+/*     Module Footer     */
+/*                       */
+/*-----------------------*/
+.rwdTableModule__footer {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: right;
+    line-height: 1.8;
+
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+
+    /* Page Switcher */
+    .rwdTableModule__page_group
+    {
+        float: right;
+        border-radius:5px;
+        overflow: hidden;
+        border: 1px solid $bdc-page_group;
+
+        .btnPrev,
+        .btnNext
+        {
+            cursor: pointer;
+            display: inline-block;
+            font-size: $fsz-page_btn;
+            height: $h-page_btn;
+            margin: 0;
+            padding: 0 10px;
+            border: none;
+            background-color: $bgc-page_btn;
+            vertical-align: bottom;
+
+            &:hover,
+            &:active
+            {
+                background-color: darken($bgc-page_btn, 10%);
+            }
+
+            &:disabled
+            {
+                cursor: default;
+                color: lighten($font-color, 40%);
+
+                &:hover,
+                &:active
+                {
+                    background-color: $bgc-page_btn;
+                }
+            }
+        }
+        .rwdTableModule__inputCurrPage
+        {
+            display: inline-block;
+            min-width: 0;
+            width: 60px;
+            height: $h-page_input;
+            text-align: center;
+            font-size: $fsz-page_btn;
+            padding-left: $pdlr-text_input;
+            padding-right: $pdlr-text_input;
+            border: 1px solid $bdc-page_group;
+            border-top: none;
+            border-bottom: none;
+            margin: 0;
+            vertical-align: bottom;
+            background-color: $bgc-page_btn;
+
+            &:hover{
+                background-color: darken($bgc-page_btn, 10%);
+            }
+        }
+    }
+}
+/* ----- Page Swither Mode ----- */
+.rwdTableModule__totalRowDesc--pageMode {
+    margin-right: 20px;
+    float: left;
+}

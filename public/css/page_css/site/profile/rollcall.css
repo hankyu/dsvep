@@ -1,0 +1,332 @@
+.autocomplete
+{
+}
+
+.card
+{
+    padding: 10px;
+}
+
+.card + .card
+{
+    margin-top: 10px;
+}
+
+.flex {
+  display: flex;
+}
+
+.rollcall__header
+{
+    display: flex;
+    justify-content: space-between;
+    line-height: 40px;
+}
+
+.rollcall__phonenumber__container
+{
+    align-items: center;
+}
+
+.rollcall__phonenumber__container input
+{
+    border: none;
+    border-bottom: 1px solid #aaa;
+    max-width: 120px;
+    padding: 0 10px;
+}
+
+.rollcall__phonenumber__container input:focus
+{
+    /* box-shadow: 0px 2px 2px -1px #4bb9ff; */
+}
+
+.rollcall__row
+{
+    align-items: center;
+}
+
+.rollcall__row + .rollcall__row
+{
+    margin-top: 10px;
+}
+
+.rollcall__row > div + div
+{
+    margin-top: 10px;
+}
+
+.rollcall__save
+{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.rollcall__table table
+{
+    border-collapse: collapse;
+    font-family: arial, sans-serif;
+    line-height: 1em;
+    width: 100%;
+}
+
+.user_datas__attend
+{
+    align-items: center;
+    display: flex;
+}
+
+.user_datas__attend label
+{
+    margin-top: 1px;
+}
+
+.user_datas__name
+{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.user_list div
+{
+    align-items: center;
+    line-height: normal;
+}
+
+td, th
+{
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+tr:nth-child(even)
+{
+    background-color: #eee;
+}
+
+#select-u_id,
+#select-unit
+{
+    margin-left: 5px;
+    border-width: 1px;
+    border-style: solid;
+    border-image: initial;
+}
+
+
+/* ------------------------ */
+/*     Roll Call Confirm     */
+/* ------------------------ */
+.jconfirm-content
+{
+    line-height: 1.5;
+}
+.jconfirm-content p
+{
+    margin-bottom: 0;
+}
+.confirmBtnSet
+{
+    text-align: right;
+}
+.confirmBtnSet .btn-danger
+{
+    margin-left: 5px;
+}
+.pConfirm
+{
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
+/* --------------- */
+/*     QR Code     */
+/* --------------- */
+#btn-rollcall-qrcode
+{
+    background-color: #f8f8f8;
+    border: 1px solid #a6a6a6;
+    border-radius: 5px;
+    width: 40px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+#btn-rollcall-qrcode:hover
+{
+    background-color: #fff;
+}
+
+#btn-rollcall-qrcode:active
+{
+    background-color: #eee;
+    box-shadow: 2px 1px 2px inset #ccc;
+}
+
+#btn-rollcall-qrcode i
+{
+    font-size: 26px;
+    vertical-align: middle;
+}
+
+.popup__card__body
+{
+    text-align: center;
+}
+.imgQRcode
+{
+    width: 90%;
+    margin: 50px auto;
+    text-align: center;
+}
+
+/* -------------------------------------- */
+/*     RollCall Table (student scope)     */
+/* -------------------------------------- */
+#tableRollCall
+{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-align: center;
+}
+
+.tableRollCall__slider
+{
+    width: 80%;
+    margin: auto;
+    overflow-x: auto;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+}
+.tableRollCall__slider table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tableRollCall__slider table th,
+.tableRollCall__slider table td
+{
+    font-size: 18px;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+    line-height: 1.5;
+    vertical-align: middle;
+}
+
+.tableRollCall__slider table thead th
+{
+    background-color: #eee;
+}
+
+.tableRollCall__slider table tbody tr:nth-child(even)
+{
+    background-color: #f9f9f9;
+}
+
+.tableRollCall__slider table tbody th
+{
+    background-color: #fff;
+}
+
+.tableRollCall__slider .fas{
+    font-size: 24px;
+    vertical-align: middle;
+}
+
+.tableRollCall__slider .fa-check-circle
+{
+    color: #5dc0de;
+}
+
+.tableRollCall__slider .fa-times-circle
+{
+    color: #d9534f;
+}
+
+@media (max-width: 767.9px)
+{
+    .tableRollCall__slider
+    {
+        width: 100%;
+    }
+
+    .tableRollCall__slider table th,
+    .tableRollCall__slider table td
+    {
+        font-size: 16px;
+    }
+    .tableRollCall__slider .fas{
+        font-size: 16px;
+        vertical-align: middle;
+    }
+}
+
+
+/* --------------------- */
+/*     RollCall Send     */
+/* --------------------- */
+.pRollcallException
+{
+    font-weight: 700;
+    margin-bottom: 0;
+    line-height: 1.5;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.ulRollcallException
+{
+    line-height: 1.5;
+}
+.pOthersSuccess
+{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.presenceMark
+{
+    font-size: 24px;
+    vertical-align: middle;
+}
+
+@media screen and (max-width: 576px)
+{
+    .rollcall__header
+    {
+        display: inline-block;
+    }
+}
+
+@media screen and (min-width: 720px)
+{
+    .user_datas
+    {
+        display: flex;
+        width: 100%;
+    }
+
+    .user_datas > div
+    {
+        align-items: center;
+        width: 25%;
+    }
+
+    .user_datas__attend
+    {
+        justify-content: flex-end;
+    }
+
+    .user_list
+    {
+        align-items: center;
+        display: flex;
+    }
+
+    .user_list > div + div
+    {
+        margin-left: 20px;
+    }
+}

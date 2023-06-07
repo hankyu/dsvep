@@ -1,0 +1,53 @@
+$halfGutter-card: 5px;
+$halfGutter-card-md: 10px;
+$halfGutter-card-sm: 5px;
+
+.defaultCardContainer {
+    padding-top: 30px;
+    padding-bottom: 20px;
+    padding-left: $halfGutter-card;
+    padding-right: $halfGutter-card;
+
+    .row {
+        margin-left: -$halfGutter-card;
+        margin-right: -$halfGutter-card;
+
+        .col-12 {
+            padding-left: $halfGutter-card;
+            padding-right: $halfGutter-card;
+            text-align: center;
+        }
+    }
+
+    @media (max-width: $max-w-md) {
+        padding-left: $halfGutter-card-md;
+        padding-right: $halfGutter-card-md;
+
+        .row {
+            margin-left: -$halfGutter-card-md;
+            margin-right: -$halfGutter-card-md;
+
+            .col-12 {
+                padding-left: $halfGutter-card-md;
+                padding-right: $halfGutter-card-md;
+                text-align: center;
+            }
+        }
+    }
+
+    @media (max-width: $max-w-sm) {
+        padding-left: $halfGutter-card-sm;
+        padding-right: $halfGutter-card-sm;
+
+        .row {
+            margin-left: -$halfGutter-card-sm;
+            margin-right: -$halfGutter-card-sm;
+
+            .col-12 {
+                padding-left: $halfGutter-card-sm;
+                padding-right: $halfGutter-card-sm;
+                text-align: center;
+            }
+        }
+    }
+}

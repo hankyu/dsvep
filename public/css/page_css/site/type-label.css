@@ -1,0 +1,33 @@
+/**
+ * type label
+ */
+
+.lesson-type.bg-entity::before
+{
+    content: '實體';
+}
+
+.lesson-type.bg-online::before
+{
+    content: '線上';
+}
+
+.bg-entity
+{
+   background: #EAD24C;
+}
+
+.bg-online
+{
+    background: #5DC0DE;
+}
+
+.bg-graduation
+{
+    background: #999A;
+}
+
+.lesson-start
+{
+    background: #5CB85C;
+}

@@ -1,0 +1,395 @@
+/* -------------------- */
+/*                      */
+/*     RWD BOUNDARY     */
+/*                      */
+/* -------------------- */
+$min-w-sm: 576px;
+$min-w-md: 768px;
+$min-w-lg: 992px;
+$min-w-xl: 1200px;
+$max-w-xs: $min-w-sm - 0.1px;
+$max-w-sm: $min-w-md - 0.1px;
+$max-w-md: $min-w-lg - 0.1px;
+$max-w-lg: $min-w-xl - 0.1px;
+$max-w-xxs: 360px; // iphne 5 等小尺寸裝置
+$max-h-xxs: 750px; // iphne 5 等小尺寸裝置
+
+/* -------------------- */
+/*                      */
+/*     COLOR SCHEME     */
+/*                      */
+/* -------------------- */
+$brand-primary: #ff98aa;
+// $complementary1: #619bb2;
+$complementary1: #17a2b8;
+$complementary2: #ffe3e8;
+$complementary3: #fffcb7;
+
+// $emphasized1: #ead24c;
+$emphasized1: #fa6c50;
+$emphasized2: #ff4b68;
+$emphasized3: #5dc0de;
+// $emphasized3: #30aefe;
+$emphasized4: #89ecda;
+
+/* ------------------ */
+/*     bootstraps     */
+/* ------------------ */
+$bs-danger: #dc3545;
+$bs-success: #28a745;
+$bs-primary: #007bff;
+$bs-warning: #ffc107;
+$bs-info: #17a2b8;
+$bs-input: #80bdff;
+$bs-inputShadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+$bs-inputValid: #28a745;
+$bs-inputValidShadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+$bs-inputInvalid: #dc3545;
+$bs-inputInvalidShadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+
+/* ------------------- */
+/*     gray levels     */
+/* ------------------- */
+$black: #000;
+$font-primary: #141414;
+$dark: #262626;
+$darkgray: #666;
+$gray: #999;
+$lightgray: #ccc;
+$bs-border: #ced4da;
+$gainsboro: #eee;
+$darkwhite: #f9f9f9;
+
+$white: #fff;
+
+/* -------------- */
+/*     border     */
+/* -------------- */
+$color-border-layout: $gray;
+$color-border-light: $gainsboro;
+$color-border-primary: $lightgray;
+
+/* -------------------- */
+/*     Shadow color     */
+/* -------------------- */
+$shadow: rgb(0, 0, 0, 0.05);
+$shadow-dark: #0006;
+
+/*---------------*/
+/*     color     */
+/*---------------*/
+$colors: (
+    brand-primary: $brand-primary,
+    complementary1: $complementary1,
+    complementary2: $complementary2,
+    complementary3: $complementary3,
+    emphasized1: $emphasized1,
+    emphasized2: $emphasized2,
+    emphasized3: $emphasized3,
+    emphasized4: $emphasized4,
+    bs-danger: $bs-danger,
+    bs-success: $bs-success,
+    bs-primary: $bs-primary,
+    bs-warning: $bs-warning,
+    bs-info: $bs-info,
+    black: $black,
+    font-primary: #141414,
+    dark: #262626,
+    darkgray: $darkgray,
+    gray: $gray,
+    lightgray: $lightgray,
+    gainsboro: $gainsboro,
+    darkwhite: $darkwhite,
+    white: $white
+) !default;
+@each $cname, $color in $colors {
+    .color-#{'' + $cname} {
+        color: $color;
+    }
+}
+
+/*------------------*/
+/*     bg color     */
+/*------------------*/
+@each $cname, $color in $colors {
+    .bg-#{'' + $cname} {
+        background: $color;
+    }
+}
+
+$white-semi-transparent: #fffe;
+
+/*-------------*/
+/*     btn     */
+/*-------------*/
+@each $cname, $color in $colors {
+    .btn-#{'' + $cname} {
+        color: #fff;
+        background-color: $color;
+        border-color: $color;
+
+        &:hover {
+            background-color: darken($color, 5%);
+            border-color: darken($color, 5%);
+        }
+    }
+}
+
+/* ---------------------- */
+/*                        */
+/*     LAYOUT SETTING     */
+/*                        */
+/* ---------------------- */
+/* --------------- */
+/*     Sidebar     */
+/* --------------- */
+$w-sidebar: 276px;
+
+/* ---------------- */
+/*     BaseCard     */
+/* ---------------- */
+$minw-baseCard: 300px;
+$minw-baseCard-xs: 216px;
+$radius-corner: 4px;
+
+/* ------------------ */
+/*     transition     */
+/* ------------------ */
+$specialBezier: cubic-bezier(0.61, 0, 0.77, 1.66);
+
+/* -------------- */
+/*     header     */
+/* -------------- */
+$h-header: 72px;
+$h-header-xs: 60px;
+$radius-header-avatar: 60px;
+.br-xxs {
+    display: none;
+
+    @media (max-width: $max-w-xxs) {
+        display: inline;
+    }
+}
+.br-xs {
+    display: none;
+
+    @media (max-width: $max-w-xs) {
+        display: inline;
+    }
+}
+
+$mt-lessonShop: 15px;
+
+/* -------------- */
+/*     bubble     */
+/* -------------- */
+$radius-bubble: 1rem;
+
+/* -------------------- */
+/*     popup modal     */
+/* -------------------- */
+$pd-popupModal: 1rem;
+$pd-popupModal-xs: 0.5rem;
+$pd-popupModal-2col-body: 2rem;
+$pd-popupModal-2col-body-xs: 1rem;
+$ptb-popupModal-2col-footer: 1rem;
+$plr-popupModal-2col-footer: 2rem;
+$ptb-popupModal-2col-footer-xs: 0.5rem;
+$plr-popupModal-2col-footer-xs: 1rem;
+$fz-popupModal: 1.2rem;
+$size-popupModalClose: 2.5rem;
+.popupModalHeader {
+    margin-bottom: 0;
+    padding: 0.5rem;
+    line-height: 1.5;
+    font-size: $fz-popupModal;
+}
+.popupModalBody {
+    padding: $pd-popupModal;
+
+    @media (max-width: $max-w-xs) {
+        padding: $pd-popupModal-xs;
+    }
+}
+.popupModalFooter {
+    background-color: $white;
+    padding: 0.5rem 1rem;
+    text-align: right;
+    font-size: 0.9rem;
+    border-top: 1px solid $color-border-light;
+}
+.popupModalFooterBtn {
+    font-size: 0.9rem;
+}
+
+/* ------------------ */
+/*                    */
+/*     Filter Set     */
+/*                    */
+/* ------------------ */
+$bgc-filterSet: $white;
+$h-filterSetBtn: 2.6rem;
+$fz-filterSet: 1.2rem;
+$ptb-filterHeader: ($h-filterSetBtn - $fz-filterSet) / 2;
+$half-h-filterBtn: $h-filterSetBtn / 2;
+
+/* ---------------------- */
+/*     Selector Modal     */
+/* ---------------------- */
+$radius-selectorModal: $half-h-filterBtn;
+
+/* ------------------ */
+/*                    */
+/*     Form Style     */
+/*                    */
+/* ------------------ */
+$mb-inputGroup: 6px;
+
+/* --------------- */
+/*                 */
+/*     No Data     */
+/*                 */
+/* --------------- */
+.noData {
+    text-align: center;
+    color: $lightgray;
+    margin-top: 2.5rem;
+
+    &:before,
+    &:after {
+        content: '----';
+        display: inline;
+    }
+}
+
+/* ------------------- */
+/*                     */
+/*     FOR @EXTEND     */
+/*                     */
+/* ------------------- */
+
+.wrapper {
+    width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (max-width: $max-w-lg) {
+        width: 940px;
+    }
+    @media (max-width: $max-w-md) {
+        width: 720px;
+    }
+    @media (max-width: $max-w-sm) {
+        width: auto;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    @media (max-width: $max-w-xs) {
+        width: auto;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+$color-card-border: $color-border-primary;
+// $color-card-shadow: $shadow;
+$color-card-shadow: $shadow;
+.cardShadow {
+    // box-shadow: 0 1px 3px 0 $color-card-shadow;
+    box-shadow: 0 0 0 1px $shadow;
+
+    &:hover,
+    &:active {
+        // box-shadow: 0 1px 4px 2px $color-card-shadow;
+        box-shadow: 0 0 0 4px $shadow;
+    }
+}
+
+.cartShadow {
+    box-shadow: 2px 5px 0px 0 $shadow;
+}
+
+.modalShadow {
+    // box-shadow: 2px 6px 6px #0006;
+    box-shadow: 2px 6px 6px $shadow-dark;
+}
+
+.lessonTypeShadow {
+    box-shadow: 3px 4px 0 -2px $shadow;
+}
+
+.singleLineEllipsis {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.bgSizeCover {
+    background: {
+        size: cover;
+        position: center center;
+        repeat: no-repeat;
+    }
+}
+.coverImgOuter {
+    overflow: hidden;
+}
+.coverImgInner {
+    width: 100%;
+    height: 100%;
+    @extend .bgSizeCover;
+}
+.hoverScaleBig {
+    transition: transform 0.3s ease-in-out;
+    transform: scale(1);
+    &:hover {
+        transform: scale(1.25);
+    }
+}
+
+$gutter-icon-word: 5px;
+$gutter-icon-word-xs: 3px;
+.faIcon {
+    margin-right: $gutter-icon-word;
+
+    @media (max-width: $max-w-xs) {
+        margin-right: $gutter-icon-word-xs;
+    }
+}
+
+.afterClearBoth {
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+}
+
+/* ------------- */
+/*               */
+/*     MIXIN     */
+/*               */
+/* ------------- */
+@mixin afterClearBoth {
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+}
+
+@mixin btnBgColorCustom($color) {
+    background-color: $color;
+    border-color: $color;
+
+    &:hover,
+    &:active {
+        background-color: darken($color, 6%);
+        border-color: darken($color, 6%);
+    }
+}
+
+@mixin verticalShadow($y-offset) {
+    // box-shadow: 0px $y-offset $y-offset 0px $shadow;
+    box-shadow: 0px $y-offset 0 0 $shadow;
+}

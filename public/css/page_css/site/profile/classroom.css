@@ -1,0 +1,817 @@
+#map
+{
+    height: 400px;
+    width: 100%;
+ }
+
+/*--- Entity Content ---*/
+.entity-header,
+.online-header
+{
+    padding: 15px;
+    box-shadow: 0 1px 3px 0 #26262633;
+    background: #FFF;
+}
+
+.entity-header .video-js,
+.online-header .video-js
+{
+    width: 100%;
+    height: 312.1875px;
+}
+
+.media-wrapper
+{
+    position: relative;
+}
+
+.dec-wrapper
+{
+    padding: 15px;
+    font-size: 2rem;
+}
+
+.dec-wrapper .title
+{
+    font-size: 2.5rem;
+}
+
+.media-wrapper img,
+.content img
+{
+    width: 100%;
+}
+
+.entity-header::before,
+.entity-header::after,
+.online-header::before,
+.online-header::after
+{
+    clear: both;
+    display: table;
+    content: " ";
+}
+
+.media-wrapper,
+.dec-wrapper
+{
+    width: 50%;
+    float: left;
+}
+
+.watch-deadline
+{
+    color: #5cb8bc;
+}
+
+.media-wrapper .lesson-type-label
+{
+    padding: 0 20px;
+}
+
+input[type=radio]
+{
+    display: none;
+}
+
+.lesson-tab-bar
+{
+    margin: 10px 0 0 -1px;
+}
+
+.lesson-tab-bar label
+{
+    display: inline-block;
+    margin: 0 0 -1px;
+    padding: 0 25px;
+    font-weight: 600;
+    text-align: center;
+    color: #CCC;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+.lesson-tab-bar label:hover
+{
+    color: #999;
+}
+
+.lesson-tab-bar input:checked + label
+{
+    color: #666;
+    border: 1px solid #EEE;
+    border-top: 3px solid #FF98AA;
+    border-bottom: 1px solid #FFF;
+    background: #FFF;
+}
+
+.introduce section
+{
+    display: none;
+    padding: 25px 15px;
+    border-top: 1px solid #EEE;
+    min-height: 60vh;
+    background: #FFF;
+    box-shadow: 0 1px 3px 0 #26262633;
+}
+
+.btn-editor
+{
+    position: relative;
+    right: -10px;
+    top: -20px;
+    float: right;
+    line-height: normal;
+    cursor: pointer;
+}
+
+.btn-float
+{
+    float: right;
+    z-index: 2;
+}
+
+.toggle-all
+{
+    height: 26px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.toggle-all + span::after
+{
+    content: '展開';
+}
+
+.toggle-all:checked + span::after
+{
+    content: '摺疊';
+}
+
+.toggle-all:checked + span i::before
+{
+    content: '\f077';
+}
+
+.btn-wrapper
+{
+    text-align: center;
+    margin: 10px 0;
+}
+
+.coupon-list
+{
+    box-shadow: 0 0 12px -5px #262626;
+}
+
+.list-header
+{
+    margin: 0;
+    border-bottom: 1px solid #9996;
+}
+
+.list-item
+{
+    position: relative;
+    margin: 0;
+}
+
+.list-item:hover
+{
+    background: #6661;
+}
+
+.list-item:hover .action-del
+{
+    display: block;
+}
+
+.action-del
+{
+    position: absolute;
+    right: 10px;
+    display: none;
+    top: 50%;
+    transform: translate(0, -40%);
+}
+
+.btn-remove-coupon
+{
+    color: #D02;
+    cursor: pointer;
+}
+
+/*--- Chpater Content ---*/
+.remark-content
+{
+    word-break: break-all;
+    margin: 0;
+}
+
+.remark-title
+{
+    float: left;
+}
+
+.remark-label
+{
+    float: left;
+    width: 85%;
+    word-break: break-all;
+}
+
+.accordion
+{
+    margin-top: 50px;
+}
+
+.cd-accordion-menu li
+{
+    line-height: 1.5em;
+}
+
+.accordion-title
+{
+    background-color: #FF98AA;
+    border: 0;
+    border-radius: 15px;
+    box-shadow: 3px 3px 12px -3px #26262633;
+    margin-bottom: 2vh;
+}
+
+.accordion-content
+{
+    background-color: #FFF;
+    padding: 20px;
+    border-radius: 0 0 15px 15px;
+    border: 0;
+}
+
+.accordion-sub-content
+{
+    display: inline-block;
+    vertical-align: top;
+    word-break: break-all;
+}
+
+.video-time,
+.lock
+{
+    padding-right: 0px;
+    min-width: 46px;
+}
+
+.lesson-online-text
+{
+    margin-right: 0;
+    margin-left: 0;
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.lesson-online-video
+{
+    margin-right: 0;
+    margin-left: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.lesson-online-video:hover
+{
+    background: #EEE5;
+}
+
+.lesson-online-video:hover > .lesson-video-card i
+{
+    display: block;
+    color: #FFFC;
+    text-shadow: 1.5px 1.5px #0005;
+}
+
+.lesson-video-card
+{
+    position: relative;
+    width: fit-content;
+    float: left;
+}
+
+.lesson-video-card img
+{
+    width: 105px;
+}
+
+.icon-play
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.mob-video-length
+{
+    display: none;
+}
+
+.lesson-online-chatper p
+{
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.lesson-online-chatper-remark
+{
+    margin-right: 0;
+    margin-left: 0;
+    padding-left: 40px;
+}
+
+.lesson-online-chatper-remark p
+{
+    font-size: 12px;
+    margin: 0;
+}
+
+.lesson-online-chatper-remark-title
+{
+    position: relative;
+    float: left;
+    padding-right: 0;
+}
+
+.lesson-online-chatper-remark-content
+{
+    position: relative;
+    float: left;
+    padding-right: 0;
+    width: 80%;
+}
+
+/*--- Question ---*/
+.message-card,
+.eva-card
+{
+    box-shadow: 0 0 8px -2px #26262633;
+    padding: 10px;
+    background: #FFF;
+    line-height: normal;
+    margin: 10px 0;
+}
+
+.message-card-header,
+{
+    margin: 20px 20px 0;
+}
+
+.header-image
+{
+    width: fit-content;
+}
+
+.header-image img
+{
+    height: 50px;
+    border-radius: 50%;
+}
+
+.btn-reply
+{
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.btn-reply button
+{
+    margin: 0 auto;
+}
+
+.flex-content
+{
+    display: flex;
+    align-items: center;
+    height: 50px;
+}
+
+.flex-content button
+{
+    margin-left: 10px;
+}
+
+.content-textarea span
+{
+    display: block;
+}
+
+.content-textarea input
+{
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+}
+
+.content-textarea input:focus
+{
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    outline: none;
+    box-shadow: 0 0 8px -2px #26262633;
+}
+
+.content-textarea input::placeholder
+{
+    color: #6666;
+}
+
+/* --- Evaluation --- */
+.eva-wrapper
+{
+    width: 100%;
+    float: left;
+    margin-top: 1vh;
+    font-size: 2rem;
+}
+
+.eva-star
+{
+    width: fit-content;
+    margin: 0 auto;
+    text-align: center;
+    cursor: pointer;
+    opacity: .6;
+}
+
+.eva-footer
+{
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.text-date
+{
+    font-size: 1.2rem;
+    color: #999;
+}
+
+.eva-content
+{
+    padding: 10px;
+}
+
+/* --- Classmate --- */
+.classmate-card .name,
+.classmate-card .name-self
+{
+    display: inline-block;
+    margin-left: 10px;
+    margin-bottom: 0;
+    width: calc(100% - 95px);
+    font-weight: normal;
+    line-height: normal;
+    vertical-align: middle;
+}
+
+.classmate-card .name
+{
+    color: #FF98AA;
+    cursor: pointer;
+}
+
+.classmate-card .name:hover
+{
+    opacity: .4;
+}
+
+.classmate-wrapper
+{
+    padding: 15px;
+}
+
+.classmate-card
+{
+    padding: 15px;
+    box-shadow: 0 0 12px -5px #262626;
+    border-radius: 5px;
+}
+
+.avatar
+{
+    width: 30px;
+    border-radius: 50%;
+}
+
+
+/*--- Video Mask ---*/
+.video-mask
+{
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #666A;
+    z-index: 999999999;
+    align-items: center;
+}
+
+.video-mask .close
+{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 3rem;
+    color: #FFF;
+    opacity: .8;
+    z-index: 5000;
+}
+
+.video-mask .close:hover
+{
+    opacity: 1;
+}
+
+.lesson-video-list
+{
+    margin: 0 auto;
+    position: relative;
+    padding: 15px 0;
+    height: 30vh;
+    width: 640px;
+    overflow: auto;
+    overflow: overlay;
+    background-color: #262626EE;
+}
+
+.lesson-video-list::-webkit-scrollbar
+{
+    width: .5em;
+}
+
+.lesson-video-list::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #FFFD;
+}
+
+.lesson-video-list::-webkit-scrollbar-thumb
+{
+    background-color: #999;
+    outline: 1px solid slategrey;
+}
+
+.lesson-video-list-item
+{
+    width: 100%;
+    float: left;
+    padding: 5px 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.lesson-video-list-item .lesson-online-chatper
+{
+    color: #FFF;
+}
+
+.lesson-video-list-item:hover
+{
+    background-color: #EEE5;
+}
+
+.lesson-video-list-item:hover > .lesson-video-card .icon-play
+{
+    display: block;
+    color: #FFFC;
+    text-shadow: 1.5px 1.5px #0005;
+}
+
+.video-active,
+.lesson-video-list-item.video-active:hover
+{
+    background-color: #DDD;
+}
+
+.video-active .icon-play
+{
+    display: block;
+}
+
+.video-active .lesson-online-chatper
+{
+    color: #262626;
+}
+
+.lesson-video .video-js
+{
+    margin: 0 auto;
+    width: 640px;
+    height: 360px;
+}
+
+.mask-video-length
+{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    line-height: normal;
+    background: #666;
+    color: #FFF;
+    padding: 0 6px;
+}
+
+/*--- Label Type ---*/
+.entity
+{
+    background: #EAD24C;
+}
+
+.online
+{
+    background: #5DC0DE;
+}
+
+.fundraising
+{
+    background: #FF98AA;
+}
+
+.lesson-type-label
+{
+    position: absolute;
+    top: 0;
+    line-height: normal;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #FFF;
+    z-index: 10;
+}
+
+.lesson-status-label
+{
+    padding: 0 20px;
+    line-height: normal;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #FFF;
+    box-shadow: 3px 5px 10px -5px #0009;
+    width: fit-content;
+}
+
+@media screen and (max-width: 991.98px)
+{
+    .entity-header .video-js,
+    .online-header .video-js
+    {
+        height: 194.0625px;
+    }
+}
+
+@media screen and (max-width: 767.98px)
+{
+    .entity-header,
+    .online-header
+    {
+        padding: 10px;
+    }
+
+    .media-wrapper
+    {
+        width: 100%;
+    }
+
+    .dec-wrapper
+    {
+        width: 100%;
+        font-size: 1.5rem;
+    }
+
+    .dec-wrapper .title
+    {
+        font-size: 1.8rem;
+    }
+
+    .cd-accordion-menu label
+    {
+        font-size: 1.6rem;
+        padding: 18px 18px 18px 48px;
+    }
+
+    .lesson-tab-bar label
+    {
+        font-size: 1.5rem;
+        padding: 0 10px;
+    }
+
+    .message-card
+    {
+        padding: 5px;
+    }
+
+    .content-textarea
+    {
+        padding: 5px;
+        word-break: break-all;
+    }
+
+    .flex-content input
+    {
+        width: 120px;
+    }
+
+    .mobile-padding-right-0
+    {
+        padding-right: 0px;
+    }
+
+    .video-time,
+    .lock
+    {
+        font-size: 12px;
+    }
+
+    .mob-hidden,
+    .lesson-video-list
+    {
+        display: none;
+    }
+
+    .lesson-video-card img
+    {
+        width: 105px;
+    }
+
+    .lesson-video
+    {
+        width: 100vw;
+    }
+
+    .mob-video-length
+    {
+        display: block;
+        text-align: right;
+    }
+
+    .lesson-video .video-js
+    {
+        padding-top: 56.25% !important;
+        width: 100%;
+        max-width: 100%;
+        height: 0;
+    }
+
+    .entity-header .video-js,
+    .online-header .video-js
+    {
+        height: 182.8125px;
+    }
+
+    .action-del
+    {
+        display: block;
+        top: 10%;
+        transform: translate(0, -40%);
+    }
+
+    .list-id::before
+    {
+        content: '編號: ';
+    }
+
+    .list-deadline::before
+    {
+        content: '截止日期: ';
+    }
+
+    .list-discount::before
+    {
+        content: '折扣價格: ';
+    }
+
+    .list-apply::before
+    {
+        content: '適用對象: ';
+    }
+
+    .list-count::before
+    {
+        content: '使用次數: ';
+    }
+
+    .list-situation::before
+    {
+        content: '使用狀況: ';
+    }
+}

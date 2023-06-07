@@ -1,0 +1,22 @@
+.input_animation_bottom
+{
+    background: #b967ff;
+    bottom: 0;
+    display: block;
+    height: 2px;
+    position: absolute;
+    transform: scaleX(0);
+    transition: ease 0.2s;
+    transform-origin:  center;
+    width: 100%;
+}
+
+.input_animation_container
+{
+    position: relative;
+}
+
+.input_animation_input:focus + .input_animation_bottom
+{
+    transform: scaleX(1);
+}

@@ -1,0 +1,284 @@
+[contenteditable="true"]:empty:not(:focus):before
+{
+    content: attr(data-text);
+    color: #aaa;
+}
+
+.lesson__qa__content
+{
+    margin-bottom: 10px;
+}
+
+.lesson__qa__title
+{
+    margin-bottom: 10px;
+    position: relative;
+    text-align: center;
+}
+
+.lesson__qa__title span
+{
+    background-color: #fff;
+    font-size: 32px;
+    padding: 12px;
+    position: relative;
+}
+
+.lesson__qa__title::before
+{
+    border-bottom: 1px solid #cccccc;
+    -webkit-box-shadow: 0 1px 0 0 red;
+    box-shadow: 0 1px 0 0 #cccccc;
+    content: "";
+    position: absolute;
+    top: 45%; left: 0; right: 0;
+    width: 100%;
+}
+
+.load__more
+{
+    color: blue;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: normal;
+    padding-left: 10px;
+}
+
+.qa__avatar img
+{
+    border-radius: 50%;
+    margin: 5px 10px;
+    max-width: 60px;
+    width: 60px;
+}
+
+.qa__avatar--2 img
+{
+    border-radius: 50%;
+    margin: 5px 10px;
+    max-width: 45px;
+    width: 45px;
+}
+
+.qa__cancel
+{
+    color: lightskyblue;
+    cursor: pointer;
+    display: inline;
+    font-size: 12px;
+    line-height: normal;
+}
+
+.qa__features__btn
+{
+    color: #f9a;
+    cursor: pointer;
+    font-size: 30px;
+    margin: 5px;
+}
+
+.qa__form
+{
+    border: 1px solid #ddd;
+    padding: 10px 10px;
+    width: 100%;
+}
+
+.qa__form hr
+{
+    margin-bottom: 10px;
+}
+
+.qa__form img,
+.qa__form__input img
+{
+    display: block;
+    margin: 5px 0;
+    width: 50%;
+}
+
+.qa__form__bar
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.qa__form__bar__features
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.qa__form__bar__features__photo
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.qa__form__bar__send
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.qa__form__input
+{
+    line-height: 25px;
+    min-height: 50px;
+    outline: none;
+    word-break: break-all;
+}
+
+.qa__form__navbar
+{
+    color: #000;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-weight: bold;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    line-height: normal;
+}
+
+.qa__form__name,
+.qa__form__name div
+{
+    align-items: center;
+    display: flex;
+    margin-right: 10px;
+}
+
+.qa__form__teacher
+{
+    background-color: #89ECDA;
+    border-radius: 25px;
+    display: flex;
+    font-size: 12px;
+    padding: 0 10px;
+}
+
+.qa__form__time div
+{
+    display: inline-flex;
+}
+
+.qa__form__update__time
+{
+    color: #bbb;
+    font-size: 12px;
+}
+
+.qa__lv
+{
+    margin-bottom: 5px;
+}
+
+.qa__lv__form
+{
+    display: inline;
+    line-height: normal;
+    padding-left: 10px;
+    width: 100%;
+}
+
+.qa__lv__form hr
+{
+    margin: 5px 0;
+}
+
+.qa__lv__lv1
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.qa__lv__lv2
+{
+    border-left: 1px solid #f9a;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-bottom: 5px;
+}
+
+.qa__new
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.qa__reply
+{
+    color: lightskyblue;
+    cursor: pointer;
+    display: inline;
+    font-size: 12px;
+    line-height: normal;
+}
+
+.qa__reply i
+{
+    pointer-events: none;
+}
+
+.upload__media__input
+{
+    display: none !important;
+}
+
+.upload__media__label
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    line-height: normal;
+    margin: 0;
+}
+
+.upload__progress
+{
+    background-color: #ddd;
+    width: 100%;
+}
+
+.upload__progress__bar
+{
+    background-color: #aef;
+    height: 12px;
+    width: 1%;
+}
+
+.youtube-container
+{
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56%;
+}
+
+@media screen and (max-width: 576px)
+{
+    .qa__avatar img
+    {
+        width: 30px;
+    }
+
+    .qa__avatar--2 img
+    {
+        width: 25px;
+    }
+}

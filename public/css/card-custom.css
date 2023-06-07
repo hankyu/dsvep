@@ -1,0 +1,50 @@
+.card
+{
+    border: 1px solid #CCC;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.12), 1px 1px 2px rgba(0,0,0,0.24);
+}
+
+.card:hover
+{
+    box-shadow: 1px 2px 1px rgba(0,0,0,0.25), 1px 4px 10px rgba(0,0,0,0.22);
+}
+
+.card > .card-header
+{
+    border-radius: 5px 5px 0 0;
+}
+
+.card-body
+{
+    text-align: left;
+    word-wrap: break-word;
+}
+
+.card-body,
+.card-header
+{
+    padding: 0 10px;
+}
+
+.card-header
+{
+    background-color: #eee;
+    font-size: 24px;
+    font-weight: bold;
+    overflow: hidden;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.card-header + .card-body
+{
+    border-top: 1px solid #CCC;
+}
+
+.card-tail
+{
+    color: #aaa;
+    font-size: 14px;
+}

@@ -1,0 +1,375 @@
+.teacher-container
+{
+    background: #FFF;
+    box-shadow: 0px 0px 15px -5px #0004;
+    margin: 2vh 0;
+    min-height: 75vh;
+    padding-bottom: 10px;
+}
+
+.teacher-side-bar
+{
+    position: fixed;
+    padding: 15px;
+}
+
+.show-pic
+{
+    border: 1px solid #999;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.show-pic img
+{
+    width: auto;
+    height: 100%;
+    z-index: 1000;
+}
+
+.membername
+{
+    text-align: center;
+    font-size: 2.5rem;
+    width: 240px;
+}
+
+.left-bar-message,
+.left-bar-score
+{
+    margin-left: 30px;
+    line-height: 2em !important;
+    cursor: pointer;
+    width: fit-content;
+}
+
+.left-bar-message span,
+.left-bar-score span
+{
+    color: #FF98AA;
+}
+
+.left-bar-message:hover span,
+.left-bar-score:hover span
+{
+    color: #FF98AAA0;
+}
+
+.left-bar-message i,
+.left-bar-score i
+{
+    margin-right: 20px;
+    opacity: .6;
+}
+
+.left-bar-message:hover i,
+.left-bar-score:hover i
+{
+    opacity: 1;
+}
+
+/* --- Content Page --- */
+.nav.nav-tabs
+{
+    margin-top: 2vh;
+}
+
+.nav.nav-tabs.scroll
+{
+    display: inline-flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.teacher-content,
+.lesson-content
+{
+    line-height: 1.5em;
+    padding: 20px 20px 10px;
+    border: 1px solid #EEE;
+    border-top: unset;
+    border-radius: 0 0 10px 10px;
+}
+
+.lesson-content
+{
+    display: none;
+    margin: 0;
+}
+
+.no-lseeon
+{
+    line-height: 3rem;
+    text-align: center;
+}
+
+.worker-view
+{
+    padding: 5px;
+    margin-bottom: 10px;
+    background-color: #FFFCB7;
+    border-left: 6px solid #5CB85C;
+    box-shadow: 0 0 12px -5px #9999;
+}
+
+.lesson-card
+{
+    padding: 0 5px;
+}
+
+.thumbnail
+{
+    box-shadow: 0 0 10px -5px #000;
+}
+
+.thumbnail:hover
+{
+    box-shadow: 0 0 16px -6px #000;
+}
+
+.thumbnail:hover img
+{
+    transform: scale(1.1);
+}
+
+.pub-status-wrapper
+{
+    position: absolute;
+    z-index: 10;
+    right: -1px;
+    bottom: 3px;
+}
+
+.lesson-type-label
+{
+    position: absolute;
+    z-index: 10;
+}
+
+.lesson-type
+{
+    padding: 0 10px;
+    line-height: normal;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #FFF;
+    box-shadow: 3px 5px 10px -5px #0009;
+}
+
+.entity
+{
+    background: #EAD24C;
+}
+
+.lesson-type.entity::before
+{
+    content: '實體';
+}
+
+.online
+{
+    background: #5DC0DE;
+}
+
+.lesson-type.online::before
+{
+    content: '線上';
+}
+
+.pub-status-label
+{
+    color: #FFF;
+    padding: 0 10px;
+    border-radius: 10px;
+}
+
+.bg-draft,
+.bg-private
+{
+    background: #999;
+}
+
+.bg-fail
+{
+    background: #F77;
+}
+
+.img-wrapper
+{
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    height: 180px;
+    position: relative;
+}
+
+.img-wrapper img
+{
+    width: 100%;
+}
+
+.caption
+{
+    text-align: center;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: block;
+    overflow: hidden;
+    padding: 10px 0 0 0;
+    color: #666;
+}
+
+.caption .price
+{
+    color: #FF4b68;
+}
+
+.caption .no-discount
+{
+    font-size: 14px;
+    text-decoration: line-through;
+}
+
+.bg-no-vacancy
+{
+    background: #d9534f;
+}
+
+.lesson-start
+{
+    background: #5CB85C;
+}
+
+.bg-graduation
+{
+    background: #999A;
+}
+
+.title i
+{
+    float: right;
+}
+
+h6
+{
+    color: #666 !important;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+
+.teacher_contents
+{
+    margin-bottom: 20px;
+    padding: 10px;
+    line-height: 1.5em;
+    word-break: break-all;
+}
+
+.teacher_contents:hover
+{
+    box-shadow: 3px 3px 12px #999;
+}
+
+#edit_introduce,
+#edit_works,
+#edit_books,
+#edit_certificate,
+#edit_awards,
+#edit_reports,
+#edit_published,
+#edit_type,
+#edit_teach
+{
+    display: none;
+    cursor: pointer;
+}
+
+#intro_content:hover #edit_introduce,
+#works_content:hover #edit_works,
+#books_content:hover #edit_books,
+#certificate_content:hover #edit_certificate,
+#awards_content:hover #edit_awards,
+#reports_content:hover #edit_reports,
+#published_content:hover #edit_published,
+#type_content:hover #edit_type,
+#teach_content:hover #edit_teach
+{
+    display: inline;
+}
+
+.teacher_contents h6
+{
+    border-bottom: 2px solid #eee;
+    line-height: 1.5;
+    margin-top: 0;
+}
+
+@media (max-width:992px)
+{
+    .teacher-side-bar
+    {
+        position: relative;
+    }
+
+    .show-pic
+    {
+        margin: 10px auto;
+        border: 1px solid #999;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+
+    .show-pic img
+    {
+        width: auto;
+        height: 100%;
+    }
+
+    .membername
+    {
+        text-align: center;
+        margin: 10px auto 10px;
+    }
+
+    .left-bar-message,
+    .left-bar-score
+    {
+        margin: 10px 5vw;
+        line-height: 1em !important;
+    }
+
+    #option
+    {
+        margin-bottom: 10px;
+        line-height: 1.5em;
+    }
+
+    #edit_introduce,
+    #edit_works,
+    #edit_books,
+    #edit_certificate,
+    #edit_awards,
+    #edit_reports,
+    #edit_published,
+    #edit_teach
+    {
+        display: inline;
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 767.99px)
+{
+    .lesson-content
+    {
+        padding: 10px 0;
+    }
+}

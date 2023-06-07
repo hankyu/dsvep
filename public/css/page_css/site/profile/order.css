@@ -1,0 +1,372 @@
+/* --- Layout Page --- */
+.confirm-srcoll
+{
+    overflow: auto;
+    max-height: 60vh;
+}
+
+.no-content
+{
+    background: #FFF;
+    padding: 15px;
+    box-shadow: 0 1px 3px 0 #26262633;
+    margin: 2vh 0;
+    text-align: center;
+}
+
+.no-content.block
+{
+    display: none;
+}
+
+.order-menu-item
+{
+    letter-spacing: 1px;
+    display: inline-block;
+    color: #FFF;
+    background: #FF98AAA0;
+    text-align: center;
+    font-size: 2rem;
+    padding: 0 15px;
+    margin: 0 10px;
+}
+
+.order-menu-item:hover
+{
+    color: #FFF;
+    background: #FF98AA;
+}
+
+.order-menu-item.active
+{
+    color: #FFF;
+    background: #FF98AA;
+    box-shadow: 6px 12px 16px -10px #0004;
+}
+
+.bg-not-pay
+{
+    background: #D9534FA0;
+}
+
+.bg-not-pay:hover,
+.bg-not-pay.active
+{
+    background: #D9534F;
+}
+
+.bg-pay
+{
+    background: #9FD8F4A0;
+}
+
+.bg-cancel
+{
+    background: #CCCCCCA0;
+}
+
+
+/* --- Order List Page --- */
+.cd-accordion-menu label
+{
+    padding: 0;
+}
+
+.cd-accordion-menu label::before,
+.cd-accordion-menu label::after
+{
+    background-image: unset;
+}
+
+.cd-accordion-menu ul a
+{
+    background: #FFF;
+    box-shadow: unset;
+    padding: 0;
+}
+
+.order-card
+{
+    background: #FFF;
+    border: 3px solid #fbc;
+    box-shadow: 0px 1px 3px 0px #26262633;
+    margin: 2vh 0;
+    padding: 15px;
+}
+
+.order-card:hover {
+    box-shadow: 5px 5px 10px 2px #26262622;
+}
+
+.order-detail
+{
+    font-size: 1.9rem;
+    color: #999;
+    font-weight: 600;
+}
+
+.order-detail-time
+{
+    text-align: right;
+}
+
+.payment-credit::after
+{
+    content: '信用卡';
+}
+
+.payment-vacc::after
+{
+    content: 'ATM轉帳';
+}
+
+.payment-cvs::after
+{
+    content: '超商代碼繳費';
+}
+
+.payment-cash::after
+{
+    content: '現金';
+}
+
+.payment-free::after
+{
+    content: '免費';
+}
+
+.payment-unionpay::after
+{
+    content: '銀聯卡';
+}
+
+.payment-webatm::after
+{
+    content: 'WEBATM';
+}
+
+.order-status-cancel,
+.order-status-pay,
+.order-status-not-pay
+{
+    float: right;
+    color: #FFF;
+    padding: 0 15px;
+    line-height: normal;
+}
+
+.order-status-cancel,
+.bg-cancel:hover,
+.bg-cancel.active
+{
+    background: #CCC;
+}
+
+.order-status-pay,
+.bg-pay:hover,
+.bg-pay.active
+{
+    background: #9FD8F4;
+}
+
+.order-status-not-pay
+{
+    background: #E69290;
+}
+
+.order-time
+{
+    color: #CCC;
+    text-align: right;
+    display: block;
+}
+
+.order-card-content li
+{
+    line-height: normal;
+}
+
+.table-bar
+{
+    background: #FF98AA20;
+    margin: 0;
+}
+
+.lesson-detail
+{
+    border-top: 1px solid #26262666;
+    padding: 15px 0;
+}
+
+.lesson-detail .row,
+.refund-row
+{
+    margin: 0;
+}
+
+.card-header
+{
+    text-align: center;
+}
+
+.card-header a::after
+{
+    content: unset;
+    background: unset;
+}
+
+.img-wrapper
+{
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.img-wrapper img
+{
+    width: 60%;
+    display: block;
+    margin: 0 auto;
+}
+
+.cancel-order
+{
+    color: #FF4b68;
+    font-weight: normal;
+    text-decoration: underline;
+    padding: 3px;
+}
+
+@media screen and (min-width: 1025px)
+{
+    .img-wrapper
+    {
+        height: 15vh;
+    }
+
+    .order-time
+    {
+        text-align: left;
+    }
+
+    input:checked + label .order-time
+    {
+        position: relative;
+        animation: move_right 1s;
+        -moz-animation: move_right 1s;
+        -webkit-animation: move_right 1s;
+        animation-fill-mode: forwards;
+    }
+}
+
+@media screen and (max-width: 767.99px)
+{
+    .mob-hidden
+    {
+        display: none;
+    }
+
+    .order-menu-item
+    {
+        font-size: 1.5rem;
+        padding: 0 8px;
+        margin: 0 5px;
+    }
+
+    .order-id,
+    .order-detail
+    {
+        font-size: 1.5rem;
+    }
+
+    .order-detail-time
+    {
+        text-align: left;
+    }
+
+    .order-status-cancel,
+    .order-status-pay,
+    .order-status-not-pay
+    {
+        padding: 0 6px;
+        font-size: 12px;
+        line-height: 3rem;
+    }
+
+    .order-time
+    {
+        font-size: 1.2rem;
+    }
+
+    .img-wrapper
+    {
+        height: 20vh;
+    }
+
+    .img-wrapper img
+    {
+        width: 80%;
+    }
+
+    .card-price,
+    .card-status,
+    .card-action
+    {
+        text-align: right;
+    }
+}
+
+@keyframes move_right
+{
+    0%
+    {
+        left: 0%;
+        text-align: left;
+    }
+    75%
+    {
+        left: 77%;
+        text-align: left;
+    }
+    100%
+    {
+        text-align: right;
+    }
+}
+
+@-moz-keyframes move_right
+{
+    0%
+    {
+        left: 0%;
+        text-align: left;
+    }
+    75%
+    {
+        left: 77%;
+        text-align: left;
+    }
+    100%
+    {
+        text-align: right;
+    }
+}
+
+@-webkit-keyframes move_right
+{
+    0%
+    {
+        left: 0%;
+        text-align: left;
+    }
+    75%
+    {
+        left: 77%;
+        text-align: left;
+    }
+    100%
+    {
+        text-align: right;
+    }
+}

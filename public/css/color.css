@@ -1,0 +1,440 @@
+a:hover,
+a:focus {
+  color: #FF98AA;
+}
+
+#navigation {
+  border-top: 5px solid #FF98AA;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0px;
+}
+
+a, .tp-caption a.btn:hover {
+  color: #FF4b68;
+}
+
+.top-nav-collapse {
+  background: #FF98AA;
+}
+
+.carousel-indicators .active {
+  background-color: #FF98AA;
+}
+
+.header-text h2 span {
+  background-color: #FF98AA;
+}
+
+.navbar-custom ul.nav ul.dropdown-menu li a:hover {
+  color: #FF98AA;
+}
+
+.owl-theme .owl-controls .owl-page.active span,
+.owl-theme .owl-controls.clickable .owl-page:hover span {
+  background-color: #FF98AA;
+}
+
+.widget-avatar .avatar:hover {
+  border: 5px solid #FF98AA;
+}
+
+/*---------------*/
+/*     color     */
+/*---------------*/
+.color-brand-primary {
+  color: #ff98aa;
+}
+
+.color-complementary1 {
+  color: #619bb2;
+}
+
+.color-complementary2 {
+  color: #ffe3e8;
+}
+
+.color-complementary3 {
+  color: #fffcb7;
+}
+
+.color-emphasized1 {
+  color: #ead24c;
+}
+
+.color-emphasized2 {
+  color: #ff4b68;
+}
+
+.color-emphasized3 {
+  color: #5dc0de;
+}
+
+.color-emphasized4 {
+  color: #89ecda;
+}
+
+.color-bs-danger {
+  color: #d9534f;
+}
+
+.color-bs-success {
+  color: #5cb85c;
+}
+
+.color-bs-primary {
+  color: #337ab7;
+}
+
+.color-bs-warning {
+  color: #f0ad4e;
+}
+
+.color-black {
+  color: #000;
+}
+
+.color-font-primary {
+  color: #141414;
+}
+
+.color-dark {
+  color: #262626;
+}
+
+.color-darkgray {
+  color: #666;
+}
+
+.color-gray {
+  color: #999;
+}
+
+.color-lightgray {
+  color: #ccc;
+}
+
+.color-gainsboro {
+  color: #eee;
+}
+
+.color-white {
+  color: #fff;
+}
+
+/*------------------*/
+/*     bg color     */
+/*------------------*/
+.bg-brand-primary {
+  background: #ff98aa;
+}
+
+.bg-complementary1 {
+  background: #619bb2;
+}
+
+.bg-complementary2 {
+  background: #ffe3e8;
+}
+
+.bg-complementary3 {
+  background: #fffcb7;
+}
+
+.bg-emphasized1 {
+  background: #ead24c;
+}
+
+.bg-emphasized2 {
+  background: #ff4b68;
+}
+
+.bg-emphasized3 {
+  background: #5dc0de;
+}
+
+.bg-emphasized4 {
+  background: #89ecda;
+}
+
+.bg-bs-danger {
+  background: #d9534f;
+}
+
+.bg-bs-success {
+  background: #5cb85c;
+}
+
+.bg-bs-primary {
+  background: #337ab7;
+}
+
+.bg-bs-warning {
+  background: #f0ad4e;
+}
+
+.bg-black {
+  background: #000;
+}
+
+.bg-font-primary {
+  background: #141414;
+}
+
+.bg-dark {
+  background: #262626;
+}
+
+.bg-darkgray {
+  background: #666;
+}
+
+.bg-gray {
+  background: #999;
+}
+
+.bg-lightgray {
+  background: #ccc;
+}
+
+.bg-gainsboro {
+  background: #eee;
+}
+
+.bg-white {
+  background: #fff;
+}
+
+/*-------------*/
+/*     btn     */
+/*-------------*/
+.btn-brand-primary {
+  color: #FFF;
+  background-color: #ff98aa;
+  border-color: #ff98aa;
+}
+.btn-brand-primary:hover {
+  background-color: #ff7f95;
+  border-color: #ff7f95;
+}
+
+.btn-complementary1 {
+  color: #FFF;
+  background-color: #619bb2;
+  border-color: #619bb2;
+}
+.btn-complementary1:hover {
+  background-color: #528fa8;
+  border-color: #528fa8;
+}
+
+.btn-complementary2 {
+  color: #FFF;
+  background-color: #ffe3e8;
+  border-color: #ffe3e8;
+}
+.btn-complementary2:hover {
+  background-color: #ffcad3;
+  border-color: #ffcad3;
+}
+
+.btn-complementary3 {
+  color: #FFF;
+  background-color: #fffcb7;
+  border-color: #fffcb7;
+}
+.btn-complementary3:hover {
+  background-color: #fffb9e;
+  border-color: #fffb9e;
+}
+
+.btn-emphasized1 {
+  color: #FFF;
+  background-color: #ead24c;
+  border-color: #ead24c;
+}
+.btn-emphasized1:hover {
+  background-color: #e7cc35;
+  border-color: #e7cc35;
+}
+
+.btn-emphasized2 {
+  color: #FFF;
+  background-color: #ff4b68;
+  border-color: #ff4b68;
+}
+.btn-emphasized2:hover {
+  background-color: #ff3253;
+  border-color: #ff3253;
+}
+
+.btn-emphasized3 {
+  color: #FFF;
+  background-color: #5dc0de;
+  border-color: #5dc0de;
+}
+.btn-emphasized3:hover {
+  background-color: #48b8da;
+  border-color: #48b8da;
+}
+
+.btn-emphasized4 {
+  color: #FFF;
+  background-color: #89ecda;
+  border-color: #89ecda;
+}
+.btn-emphasized4:hover {
+  background-color: #73e8d3;
+  border-color: #73e8d3;
+}
+
+.btn-bs-danger {
+  color: #FFF;
+  background-color: #d9534f;
+  border-color: #d9534f;
+}
+.btn-bs-danger:hover {
+  background-color: #d43f3a;
+  border-color: #d43f3a;
+}
+
+.btn-bs-success {
+  color: #FFF;
+  background-color: #5cb85c;
+  border-color: #5cb85c;
+}
+.btn-bs-success:hover {
+  background-color: #4cae4c;
+  border-color: #4cae4c;
+}
+
+.btn-bs-primary {
+  color: #FFF;
+  background-color: #337ab7;
+  border-color: #337ab7;
+}
+.btn-bs-primary:hover {
+  background-color: #2d6da3;
+  border-color: #2d6da3;
+}
+
+.btn-bs-warning {
+  color: #FFF;
+  background-color: #f0ad4e;
+  border-color: #f0ad4e;
+}
+.btn-bs-warning:hover {
+  background-color: #eea236;
+  border-color: #eea236;
+}
+
+.btn-black {
+  color: #FFF;
+  background-color: #000;
+  border-color: #000;
+}
+.btn-black:hover {
+  background-color: black;
+  border-color: black;
+}
+
+.btn-font-primary {
+  color: #FFF;
+  background-color: #141414;
+  border-color: #141414;
+}
+.btn-font-primary:hover {
+  background-color: #070707;
+  border-color: #070707;
+}
+
+.btn-dark {
+  color: #FFF;
+  background-color: #262626;
+  border-color: #262626;
+}
+.btn-dark:hover {
+  background-color: #191919;
+  border-color: #191919;
+}
+
+.btn-darkgray {
+  color: #FFF;
+  background-color: #666;
+  border-color: #666;
+}
+.btn-darkgray:hover {
+  background-color: #595959;
+  border-color: #595959;
+}
+
+.btn-gray {
+  color: #FFF;
+  background-color: #999;
+  border-color: #999;
+}
+.btn-gray:hover {
+  background-color: #8c8c8c;
+  border-color: #8c8c8c;
+}
+
+.btn-lightgray {
+  color: #FFF;
+  background-color: #ccc;
+  border-color: #ccc;
+}
+.btn-lightgray:hover {
+  background-color: #bfbfbf;
+  border-color: #bfbfbf;
+}
+
+.btn-gainsboro {
+  color: #FFF;
+  background-color: #eee;
+  border-color: #eee;
+}
+.btn-gainsboro:hover {
+  background-color: #e1e1e1;
+  border-color: #e1e1e1;
+}
+
+.btn-white {
+  color: #FFF;
+  background-color: #fff;
+  border-color: #fff;
+}
+.btn-white:hover {
+  background-color: #f2f2f2;
+  border-color: #f2f2f2;
+}
+
+.bg-fundraising {
+  background: #FF98AA;
+}
+
+.highlight-color {
+  background-color: #FF98AA;
+}
+
+.service-box:hover {
+  border-bottom: 2px solid #FF98AA;
+}
+
+form#contact-form input:focus, form#contact-form select:focus, form#contact-form textarea:focus {
+  border-color: #FF98AA;
+}
+
+form.search-form input:focus {
+  border-color: #FF98AA;
+}
+
+/*------------*/
+/*   footer   */
+/*------------*/
+ul.footer-menu li a:hover {
+  color: #FF98AA;
+}
+
+footer a.totop:hover {
+  color: #FF98AA;
+}

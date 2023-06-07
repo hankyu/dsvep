@@ -1,0 +1,409 @@
+.cart-content,
+.member-wrapper
+{
+    padding: 10px;
+}
+
+.cart-title
+{
+    padding: 20px 20px 0 20px;
+}
+
+.cart-list-title
+{
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .05);
+    border-radius: 2px;
+    background: #FFF;
+    height: 50px;
+    padding: 0 10px;
+    margin-bottom: 10px;
+    margin-top: -10px;
+}
+
+.mob-show
+{
+    display: none;
+}
+
+.cart-list
+{
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .05);
+    border-radius: 2px;
+    padding: 10px;
+    background: #FFF;
+    margin-bottom: 10px;
+}
+
+.cart-receipt
+{
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .05);
+    border-radius: 2px;
+    background: #FFF;
+    padding: 10px;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.receipt-label
+{
+    margin-left: 15px;
+}
+
+.receipt-label input[type=radio]
+{
+    opacity: 0;
+}
+
+.receipt-label input[type=text]
+{
+    display: none;
+}
+
+.receipt-label span
+{
+    padding: 0 10px;
+    box-shadow: 0 0 8px -3px #262626;
+    cursor: pointer;
+}
+
+.receipt-label:hover span
+{
+    box-shadow: 0 0 12px -3px #262626;
+}
+
+.receipt-label input:checked ~ span
+{
+    box-shadow: 0 0 8px -3px #262626;
+    background: #0A0A;
+    color: #FFF;
+    font-weight: 400;
+}
+
+.receipt-label input:checked ~ input
+{
+    display: inline-block;
+}
+
+.cart-total
+{
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .05);
+    border-radius: 2px;
+    background: #FFF;
+    padding: 10px;
+    margin: 0;
+}
+
+.cart-receipt .form-control
+{
+    display: inline;
+    width: auto;
+}
+
+.member-card
+{
+    padding: 15px;
+    background: #FFF;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .05);
+}
+
+.member-label
+{
+    width: 100%;
+    margin-bottom: 0;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #6669;
+}
+
+.lesson-data
+{
+    line-height: 1.5em;
+}
+
+#member_data:checked + label i::before
+{
+    content: '\f077';
+}
+
+#member_data:checked ~ .member-data-content
+{
+    display: block;
+}
+
+.member-data-content
+{
+    display: none;
+    padding-left: 30px;
+}
+
+.cart-item
+{
+    margin: 0;
+    padding: 5px;
+    position: relative;
+}
+
+.cart-item-header
+{
+    padding: 0;
+    position: relative;
+}
+
+.item-delete-icon
+{
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%);
+}
+
+.item-check-wrapper input[type=checkbox]
+{
+    margin: 0;
+}
+
+.cart-item-image
+{
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    float: left;
+    position: relative;
+}
+
+.cart-item-image img
+{
+    width: 100%;
+}
+
+.item-section
+{
+    position: absolute;
+    top: 50%;
+    right: 16.66666667%;
+    transform: translate(0, -50%);
+}
+
+.cart-delete:hover
+{
+    color: #FF98AA;
+    cursor: pointer;
+}
+
+.cart-text
+{
+    margin-left: 5px;
+    margin-right: 10px;
+    line-height: 1em;
+    border: none;
+    border-bottom: 1px solid #EEE;
+    padding: 3px;
+}
+
+.cart-text:focus
+{
+    outline-width: 0;
+}
+
+.lesson-type-label
+{
+    position: absolute;
+    top: 0;
+    left: 15px;
+    line-height: normal;
+    padding: 0 5px;
+    color: #FFF;
+    box-shadow: 2px 8px 8px -5px #0009;
+}
+
+.entity .lesson-type-label
+{
+    background: #EAD24C;
+}
+
+.online .lesson-type-label
+{
+    background: #5DC0DE;
+}
+
+.jconfirm-box
+{
+    max-height: 80vh;
+    overflow-y: auto !important;
+}
+
+
+/* --------------------------- */
+/*     Cellphone Input Set     */
+/* --------------------------- */
+.cellphoneInputContainer
+{
+    position: relative;
+}
+
+.cellphoneInputSet
+{
+    width: 100%;
+    display: -webkit-flex;
+    display: flex;
+    line-height: 1;
+}
+
+.hintPhone
+{
+    position: absolute;
+    border: 1px solid #5DC0DE;
+    line-height: 1.5;
+    z-index: 50;
+    top: 43px;
+    left: 0px;
+    right: 0px;
+    background-color: #fff;
+    border-radius: 3px;
+    padding: 15px;
+}
+
+.hintPhone:after
+{
+    content: '';
+    display: block;
+    position: absolute;
+    left: 10px;
+    top: -5px;
+    width: 8px;
+    height: 8px;
+    transform: rotate(45deg);
+    background-color: #fff;
+    border-left: 1px solid #5DC0DE;
+    border-top: 1px solid #5DC0DE;
+    z-index: 55;
+}
+
+.cellphoneInputSet__input
+{
+    -webkit-flex: 1;
+    flex: 1;
+    position: relative;
+    padding-right: 15px;
+}
+
+#verifyPopupBody
+{
+    line-height: 2;
+    padding: 10px 20px;
+}
+
+#verifyPopupBody p
+{
+    margin-bottom: 0;
+}
+
+.smallfont
+{
+    font-size: 14px;
+}
+
+#verificationCode
+{
+    border-radius: 4px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btnVerify
+{
+    min-width: 136px;
+    min-height: 52px;
+}
+
+#btnReget
+{
+    margin-left: 5px;
+}
+
+.bodyDeliveringSMS
+{
+    text-align: center;
+}
+
+
+@media (max-width: 549.9px)
+{
+    .cellphoneInputSet
+    {
+        display: block;
+    }
+
+    .cellphoneInputSet__input
+    {
+        margin-top: 10px;
+        margin-right: -15px;
+
+    }
+}
+
+@media (min-width: 768px)
+{
+    .item-section-name
+    {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translate(0, -50%);
+    }
+}
+
+@media (max-width: 575.99px)
+{
+    .mob-hidden
+    {
+        display: none;
+    }
+
+    .mob-show
+    {
+        display: block;
+    }
+
+    .cart-list
+    {
+        padding: 10px 0;
+    }
+
+    .cart-item
+    {
+        line-height: normal;
+    }
+
+    .item-section-name
+    {
+        padding: 0;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    .cart-total
+    {
+        height: auto;
+    }
+
+    .check-all,
+    .offer-code
+    {
+        padding: 0;
+    }
+
+    .offer-code,
+    .total-fee
+    {
+        text-align: center;
+    }
+
+    .total-fee::before
+    {
+        content: '總額: ';
+    }
+}

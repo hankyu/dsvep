@@ -1,0 +1,12 @@
+.upload__progress
+{
+    background-color: #ddd;
+    width: 100%;
+}
+
+.upload__progress__bar
+{
+    background-color: #aef;
+    height: 12px;
+    width: 1%;
+}

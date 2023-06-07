@@ -1,0 +1,336 @@
+/* --- About --- */
+.header
+{
+    margin-bottom: 30px;
+    padding: 30vh 0;
+    width: 100%;
+    filter: opacity(.8);
+}
+
+.header-announcement
+{
+    background: url('https://i.imgur.com/ImnSG8y.jpg');
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header-about
+{
+    background: url('https://i.imgur.com/N7g2Xg2.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header-sevrice
+{
+    background: url('https://i.imgur.com/9B4nu8n.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header-tutorial
+{
+    background: url('https://i.imgur.com/TlgLc15.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 40vh 0;
+}
+
+.menu-outer
+{
+    position: sticky;
+    position: -webkit-sticky;
+    top: 100px;
+    height: 80vh;
+    overflow-y: auto;
+}
+
+.body
+{
+    box-shadow: 0 0 12px -5px #999;
+    border-radius: 3px;
+    margin-bottom: 30px;
+    padding: 25px;
+    background: #FFF;
+}
+
+.quote-name
+{
+    display: block;
+    padding: 10px;
+    width: 100%;
+    text-align: right;
+}
+
+.diamond
+{
+    margin: 0 auto;
+    padding: 0;
+    width: fit-content;
+    background: #FFF;
+}
+
+.diamond::after
+{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.item
+{
+    float: left;
+    height: 180px;
+    width: 180px;
+    margin: 45px;
+    padding-bottom: 90px;
+    overflow: hidden;
+    background: #A6D5E7;
+    transform: rotate(45deg);
+}
+
+.item:hover
+{
+    opacity: .6;
+    cursor: pointer;
+}
+
+.item a
+{
+    color: #666;
+}
+
+.item:first-child
+{
+    margin-bottom: -90px;
+    margin-left: 180px;
+}
+
+.item:nth-child(2)
+{
+    clear: left;
+}
+
+.inner
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding-top: 40%;
+    font-size: 2em;
+    text-align: center;
+    transform: rotate(-45deg);
+}
+
+a
+{
+    color: #262626;
+}
+
+.category
+{
+    padding-bottom: 30px;
+}
+
+h4
+{
+    margin: 0 0 10px;
+}
+
+/* --- Terms --- */
+.indent-20
+{
+    padding-left: 20px;
+}
+
+.indent-30
+{
+    padding-left: 30px;
+}
+
+.indent-40
+{
+    padding-left: 40px;
+}
+
+.indent-60
+{
+    padding-left: 60px;
+}
+
+.blank-right
+{
+    margin-right: 10px;
+}
+
+.menu-item
+{
+    cursor: pointer;
+}
+
+.menu-item:hover
+{
+    opacity: .4;
+}
+
+.menu-item.active
+{
+    font-weight: bold;
+    color: #262626;
+}
+
+.refund__link
+{
+    color: red;
+}
+
+.header-terms
+{
+    background: url('https://i.imgur.com/ALZOhIA.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: .8;
+}
+
+.header-terms .title
+{
+    padding: 10px;
+    color: #FFF;
+    line-height: 100px;
+    font-size: 100px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.back
+{
+    color: #00F;
+    font-size: 20px;
+}
+
+.link
+{
+    color: #00f;
+    text-decoration: underline;
+}
+
+.section
+{
+    padding-top: 100px;
+}
+
+.youtube
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.youtube-container
+{
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56%;
+}
+
+@media (max-width: 767px)
+{
+  .header-tutorial
+  {
+      padding: 0;
+  }
+
+  .header-terms .title
+  {
+      font-size: 60px;
+  }
+
+  .menu-item
+  {
+      font-size: 12px;
+  }
+
+  .item
+  {
+      height: 90px;
+      width: 90px;
+      margin: 22.5px;
+      padding-bottom: 45px;
+  }
+
+  .item:first-child
+  {
+      margin-bottom: -45px;
+      margin-left: 90px;
+  }
+
+  .inner
+  {
+      padding-top: 30%;
+      font-size: 1em;
+  }
+
+  .section
+  {
+      padding-top: 130px;
+  }
+}
+
+@media (max-width: 450px)
+{
+    .tutorial
+    {
+        width: 0;
+        height: 0;
+    }
+
+    .menu-outer
+    {
+        top: 130px;
+    }
+
+    body ul
+    {
+        line-height: 2em;
+    }
+}
+
+/* iPhone 5 */
+@media (max-width: 350px)
+{
+    .item
+    {
+        height: 70px;
+        width: 70px;
+        /* margin: 22.5px;
+        padding-bottom: 45px; */
+    }
+  
+    .item:first-child
+    {
+        margin-left: 70px;
+    }
+    .item:nth-child(2)
+    {
+        margin-left: 10px;
+        margin-top: 33px;
+    }
+    .item:nth-child(3)
+    {
+        margin-left: 30px;
+        margin-top: 33px;
+    }
+  
+    .inner
+    {
+        padding-top: 20%;
+    }
+}

@@ -1,0 +1,338 @@
+/* --- Avatar Bar --- */
+.show-pic
+{
+    margin: 20px 20px 20px 20px;
+    border: 1px solid #999;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: fixed;
+}
+
+.avatar:hover
+{
+    opacity: .6;
+    cursor: pointer;
+}
+
+.show-pic img
+{
+    width: auto;
+    height: 100%;
+    z-index: 1000;
+}
+
+.edit-icon
+{
+    position: fixed;
+    margin: 180px 50px 0 0;
+    font-size: 20px;
+}
+
+.edit-icon i
+{
+    border: 1px solid #666;
+    border-radius: 50px;
+    background-color: #CCC;
+    padding: 10px;
+    margin-left: 170px;
+}
+
+.membername
+{
+    position: fixed;
+    margin: 250px 50px 0 0;
+    font-size: 30px;
+    text-align: center;
+    width: 240px;
+}
+
+.method
+{
+    margin-bottom: 20px;
+}
+
+.method button
+{
+    float: right;
+}
+
+/* --- Profile Content --- */
+select,
+select option
+{
+   background: #FFF;
+}
+
+.profile-content
+{
+    padding: 40px;
+    margin: 0;
+    background: #FFF;
+    border: 1px solid #EEE;
+    border-top: transparent;
+}
+
+.nav
+{
+    margin-top: 10px;
+}
+
+.has-feedback .form-control-feedback
+{
+    top: 0;
+    right: 20px;
+    z-index: 100;
+}
+
+.sex,
+.sex .male
+{
+    float: left;
+}
+
+.sex .female
+{
+    margin-left: 30px;
+    float: left;
+}
+
+.notice
+{
+    color: #FF4b68;
+    margin-top: -20px;
+    margin-bottom: 5px;
+    line-height: 1.5em;
+}
+
+.must
+{
+    color: #FF4b68;
+}
+
+/* --- Avatar Popup Content --- */
+.image-editor
+{
+    text-align: center;
+}
+
+.upload-img-wrapper
+{
+    margin: 15px 0;
+}
+
+.upload-img-label
+{
+    border: 2px dashed #26262633;
+    cursor: pointer;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    line-height: 1.42857143;
+    text-align: center;
+    letter-spacing: 1px;
+    font-weight: 400;
+    font-size: 14px;
+    opacity: .6;
+}
+
+.upload-img-label:hover
+{
+    opacity: 1;
+}
+
+.cropit-preview
+{
+    background-color: #F8F8F8;
+    background-size: cover;
+    border: 5px solid #CCC;
+    border-radius: 3px;
+    margin-top: 7px;
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+}
+
+.cropit-preview-image-container
+{
+    cursor: move;
+}
+
+.cropit-preview-background
+{
+    opacity: .2;
+    cursor: auto;
+}
+
+.avatar-remind
+{
+    display: block;
+    line-height: normal;
+    font-size: 1.4rem;
+    color: #D22;
+    margin-top: 5px;
+}
+
+input[type=file]
+{
+    display: none;
+}
+
+input,
+.export
+{
+    position: relative;
+    z-index: 10;
+    display: block;
+}
+
+/* --------------------------- */
+/*     Cellphone Input Set     */
+/* --------------------------- */
+.cellphoneInputSet
+{
+    width: 100%;
+    display: -webkit-flex;
+    display: flex;
+    padding-top: 7px;
+    line-height: 1;
+}
+
+.hintPhone
+{
+    position: absolute;
+    border: 1px solid #5DC0DE;
+    line-height: 1.5;
+    z-index: 50;
+    top: 50px;
+    left: 15px;
+    right: 15px;
+    background-color: #fff;
+    border-radius: 3px;
+    padding: 15px;
+}
+
+.hintPhone:after
+{
+    content: '';
+    display: block;
+    position: absolute;
+    left: 10px;
+    top: -5px;
+    width: 8px;
+    height: 8px;
+    transform: rotate(45deg);
+    background-color: #fff;
+    border-left: 1px solid #5DC0DE;
+    border-top: 1px solid #5DC0DE;
+    z-index: 55;
+}
+
+.cellphoneInputSet__input
+{
+    -webkit-flex: 1;
+    flex: 1;
+    position: relative;
+    padding-right: 15px;
+}
+
+#verifyPopupBody
+{
+    line-height: 2;
+    padding: 10px 20px;
+}
+
+#verifyPopupBody p
+{
+    margin-bottom: 0;
+}
+
+.smallfont
+{
+    font-size: 14px;
+}
+
+#verificationCode
+{
+    border-radius: 4px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btnVerify
+{
+    min-width: 136px;
+    min-height: 52px;
+}
+
+#btnReget
+{
+    margin-left: 5px;
+}
+
+.bodyDeliveringSMS
+{
+    text-align: center;
+}
+
+@media (max-width: 549.9px)
+{
+    .cellphoneInputSet
+    {
+        display: block;
+    }
+
+    .cellphoneInputSet__input
+    {
+        margin-top: 10px;
+        margin-right: -15px;
+
+    }
+}
+
+@media (max-width:992px)
+{
+    .show-pic
+    {
+        margin: 10px auto;
+        border: 1px solid #999;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .show-pic img
+    {
+        width: auto;
+        height: 100%;
+        position: absolute;
+    }
+
+    .edit-icon
+    {
+        position: absolute;
+        margin: -50px 0 0 0;
+        font-size: 20px;
+        z-index: 1000
+    }
+
+    .edit-icon i
+    {
+        border: 1px solid #666;
+        border-radius: 50px;
+        background-color: #CCC;
+        padding: 10px;
+        margin-left: 55vw;
+    }
+
+    .membername
+    {
+        text-align: center;
+        position: relative;
+        margin: 10px auto 10px;
+    }
+}
+

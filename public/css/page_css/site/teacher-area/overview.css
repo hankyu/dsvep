@@ -1,0 +1,367 @@
+/*--- Menu ---*/
+.overview-menu
+{
+    margin-bottom: 20px;
+    width: auto;
+}
+
+.overview-menu-item,
+.overview__menu__item__sort
+{
+    letter-spacing: 1px;
+    display: inline-block;
+    color: #FFF;
+    text-align: center;
+    font-size: 2rem;
+    padding: 0;
+    margin: 2vh 10px;
+    opacity: .6;
+}
+
+.overview-menu-item
+{
+    width: 100px;
+}
+
+.overview-menu-item:hover
+{
+    color: #FFF;
+    opacity: 1;
+}
+
+.overview-menu-item.active
+{
+    color: #FFF;
+    opacity: 1;
+    box-shadow: 6px 12px 16px -10px #0004;
+}
+
+.overview-menu-item.all,
+.overview-menu-item.popular
+{
+    background: #FF98AA;
+}
+
+.overview-menu-item.evaluate
+{
+    background: #EAD24C;
+}
+
+.sort__create__date.active
+{
+    color: #FFF;
+    opacity: 1;
+    box-shadow: 6px 12px 16px -10px #0004;
+}
+
+.sort__create__date
+{
+    background-color: #5CB85C;
+    padding: 0 10px;
+    border-radius: 25px;
+    padding: 0 20px;
+}
+
+.icon-fixed
+{
+    position: fixed;
+    right: 15%;
+    bottom: 15%;
+    transform: translate(-50%, -50%);
+    box-shadow: 5px 5px 12px -3px #262626AA;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    background: #D9534F;
+    z-index: 20;
+}
+
+.icon-wrapper
+{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    height: 48px;
+}
+
+.icon-wrapper i
+{
+    margin: 0 auto;
+    color: #FFF;
+}
+
+.not-found.block
+{
+    display: none;
+}
+
+.not-found
+{
+    text-align: center;
+    background: #FFF;
+    box-shadow: 0 0 12px -5px #262626;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px 2px;
+}
+
+.thumbnail .caption
+{
+    text-align: center;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: block;
+    overflow: hidden;
+    padding: 10px 0 0 0;
+    color: #666;
+}
+
+.thumbnail .teacher-avatar
+{
+    height: 190px;
+    width: 190px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}
+
+figure
+{
+    position: relative;
+}
+
+.lesson__card__label
+{
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+    min-height: 36px;
+}
+
+.loading-lesson
+{
+    margin: 0 auto;
+    background: #FFF;
+    border: 1px solid #EEE;
+    border-radius: 4px;
+    box-shadow: 3px 3px 12px -5px #0004;
+    text-align: center;
+}
+
+.loaded-all-lesson
+{
+    display: flex;
+    justify-content: center;
+
+}
+
+.loaded-text
+{
+    background-color: #ffffff;
+    text-align: center;
+    white-space: nowrap;
+    width: 150px;
+}
+
+.loaded-all-lesson::after
+{
+    z-index: -1;
+    position: absolute;
+    margin: 22px auto 0 auto;
+    width: 100%;
+    border-bottom: 2px solid #cccccc;
+    content: "";
+}
+
+.pub-status-wrapper
+{
+    position: absolute;
+    z-index: 10;
+    right: -1px;
+    bottom: 3px;
+}
+
+.lesson-type-label
+{
+    position: absolute;
+    z-index: 10;
+}
+
+.lesson__label__id
+{
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    z-index: 10;
+}
+
+.lesson__label__id span
+{
+    background-color: #666;
+    color: white;
+    padding: 5px;
+    font-size: 20px;
+}
+
+.lesson-type
+{
+    padding: 0 10px;
+    line-height: normal;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #FFF;
+    box-shadow: 3px 5px 10px -5px #0009;
+}
+
+.entity
+{
+    background: #EAD24C;
+}
+
+.lesson-type.entity::before
+{
+    content: '實體';
+}
+
+.online
+{
+    background: #5DC0DE;
+}
+
+.lesson-type.online::before
+{
+    content: '線上';
+}
+
+.img-wrapper
+{
+    height: 180px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.img-wrapper img
+{
+    width: 100%;
+}
+
+.pub-status-label
+{
+    color: #FFF;
+    padding: 0 10px;
+    border-radius: 10px;
+}
+
+.bg-draft
+{
+    background: #999;
+}
+
+.bg-fail
+{
+    background: #D9534F;
+}
+
+.bg-no-vacancy
+{
+    background: #D9534F;
+}
+
+.bg-graduation
+{
+    background: #999A;
+}
+
+.lesson-start
+{
+    background: #5CB85C;
+}
+
+.intro-exp-wrapper
+{
+    height: 27px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    padding: 0 10px;
+}
+
+.teacher__card__caption__teach__type
+{
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    height: 90px;
+    line-height: 30px;
+    margin: 0px 25px;
+    overflow: hidden;
+    text-align: initial;
+    white-space: normal;
+}
+
+.buy-people
+{
+    line-height: 34px;
+    white-space: nowrap;
+}
+
+.click-cursor
+{
+    cursor: pointer;
+}
+
+
+@media (min-width: 1025px)
+{
+    .icon-fixed
+    {
+        opacity: .7;
+    }
+
+    .icon-fixed:hover
+    {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 1024.99px)
+{
+    .icon-fixed
+    {
+        right: 5%;
+    }
+}
+
+@media (max-width: 991.99px)
+{
+    .icon-fixed
+    {
+        right: 5%;
+        bottom: 10%;
+    }
+}
+
+@media (max-width: 767.99px)
+{
+    .lesson-overview-menu
+    {
+        width: fit-content;
+    }
+
+    .lesson-overview-menu-item
+    {
+        padding: 10px;
+        margin: 1vh 5px;
+        width: fit-content;
+    }
+
+    .icon-fixed
+    {
+        right: 2%;
+        bottom: 5%;
+    }
+}

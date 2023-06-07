@@ -1,0 +1,410 @@
+.lesson-overview-wrapper
+{
+    margin-bottom: 10vh;
+    margin-top: 5vh;
+}
+
+/*--- Menu ---*/
+.lesson-overview-menu
+{
+    margin-bottom: 20px;
+}
+
+.lesson-overview-menu-item
+{
+    letter-spacing: 1px;
+    display: inline-block;
+    background: #FF98AAA0;
+    color: #FFF;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.lesson-overview-menu-item:hover
+{
+    background: #FF98AA;
+    color: #FFF;
+}
+
+.lesson-overview-menu-item.active
+{
+    color: #FFF;
+    background: #FF98AA;
+    box-shadow: 6px 12px 16px -10px #0004;
+}
+
+#entity
+{
+    background: #EAD24CA0;
+}
+
+#entity:hover
+{
+    background: #EAD24C;
+    color: #FFF;
+}
+
+#entity.active
+{
+    color: #FFF;
+    background: #EAD24C;
+    box-shadow: 6px 12px 16px -10px #0004;
+}
+
+#online
+{
+    background: #5DC0DEA0;
+}
+
+#online:hover
+{
+    background: #5DC0DE;
+    color: #FFF;
+}
+
+#online.active
+{
+    color: #FFF;
+    background: #5DC0DE;
+    box-shadow: 6px 12px 16px -10px #0004;
+}
+
+#fundraising
+{
+    background: #FF98AAA0;
+}
+
+#fundraising:hover
+{
+    background: #FF98AA;
+    color: #FFF;
+}
+
+#fundraising.active
+{
+    color: #FFF;
+    background: #FF98AA;
+    box-shadow: 6px 12px 16px -10px #0004;
+}
+
+/*--- Lesson Card ---*/
+.lesson-overview-crad,
+.not-found
+{
+    padding: 2vh 2vw;
+    box-shadow: 0 0 8px -2px #0004;
+    margin-bottom: 1.5vh;
+    position: relative;
+    border-radius: 5px;
+    background: #FFF;
+}
+
+.lesson-overview-crad.remove
+{
+    animation: zoom_out 0.6s;
+    -moz-animation: zoom_out 0.6s;
+    -webkit-animation: zoom_out 0.6s;
+    -o-animation: zoom_out 0.6s;
+}
+
+.not-found.block
+{
+    display: none;
+}
+
+.lesson-overview-content
+{
+    line-height: normal;
+}
+.watch-deadline {
+    color: #5cb8bc;
+}
+
+.lesson-overview-content h3,
+.lesson-overview-content h5
+{
+    margin: 0;
+    padding: 0;
+}
+
+.lesson-overview-header
+{
+    float: left;
+    overflow: hidden;
+    position: relative;
+    padding: 0;
+}
+
+.lesson-overview-header img
+{
+    width: 100%;
+}
+
+.lesson-overview-label,
+.lesson-status-label
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: normal;
+    padding: 5px 10px;
+    color: #FFF;
+    box-shadow: 5px 3px 15px 0px #0009;
+}
+
+.lesson-status-label
+{
+    right: 0;
+    left: unset;
+}
+
+.entity .lesson-overview-label
+{
+    background: #EAD24C;
+}
+
+.online .lesson-overview-label
+{
+    background: #5DC0DE;
+}
+
+.fundraising.lesson-status-label
+{
+    background: #FF98AA;
+}
+
+.prepare.lesson-status-label
+{
+    background: #619bb2;
+}
+
+.lesson-overview-teacher
+{
+    width: fit-content;
+    position: absolute;
+    background: #FFF;
+    border-radius: 36px;
+}
+
+.lesson-overview-teacher img
+{
+    width: 72px;
+    height: 72px;
+    border-radius: 36px;
+    padding: 5px;
+    border: 1px solid #0004;
+}
+
+.lesson-overview-teacher span
+{
+    display: block;
+    text-align: center;
+}
+
+.lesson-overview-footer
+{
+    background: #FF98AAA0;
+    float: right;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(-25%, -50%);
+    cursor: pointer;
+    box-shadow: 6px 6px 10px -2px #6664;
+}
+
+.lesson-overview-footer:hover
+{
+    background: #FF98AA;
+}
+
+.lesson-overview-footer span
+{
+    color: #FFF;
+    margin: 0 auto;
+}
+
+.lesson-overview-footer-danger
+{
+    background: #d9534f;
+}
+
+.lesson-overview-footer-danger:hover
+{
+    background: #d9534f;
+}
+
+.lesson-overview-footer-expired
+{
+    background: #999;
+}
+
+.lesson-overview-footer-expired:hover
+{
+    background: #999;
+}
+
+@keyframes zoom_out
+{
+    0%   {transform: scale(1);}
+    100% {transform: scale(.2);}
+}
+
+@-moz-keyframes zoom_out
+{
+    0%   {transform: scale(1);}
+    100% {transform: scale(.2);}
+}
+
+@-webkit-keyframes zoom_out
+{
+    0%   {transform: scale(1);}
+    100% {transform: scale(.2);}
+}
+
+@-o-keyframes zoom_out
+{
+    0%   {transform: scale(1);}
+    100% {transform: scale(.2);}
+}
+
+
+@media (min-width: 300px)
+{
+    .lesson-overview-menu
+    {
+        width: fit-content;
+    }
+
+    .lesson-overview-menu-item
+    {
+        padding: 0 10px;
+        margin: 0 5px;
+        width: fit-content;
+    }
+
+    .lesson-overview-header
+    {
+        height: 207px;
+        display: flex;
+        align-items: center;
+    }
+
+    .lesson-overview-teacher
+    {
+        top: 160px;
+        right: 0;
+    }
+
+    .lesson-overview-content
+    {
+        margin-top: 2.5vh;
+    }
+
+    .lesson-overview-content h3
+    {
+        font-size: 2rem;
+    }
+
+    .lesson-overview-content h5
+    {
+        font-size: 1.5rem;
+        color: #999;
+    }
+
+    .lesson-overview-footer
+    {
+        display: none;
+    }
+}
+
+@media (min-width: 768px)
+{
+    .lesson-overview-menu
+    {
+        width: auto;
+    }
+
+    .lesson-overview-menu-item
+    {
+        padding: 0;
+        width: 100px;
+        margin: 2vh 10px;
+    }
+
+    .lesson-overview-crad.row
+    {
+        margin-right: 0;
+    }
+
+    .lesson-overview-header
+    {
+        width: 352px;
+        height: 198px;
+    }
+
+    .lesson-overview-teacher
+    {
+        top: unset;
+        right: unset;
+    }
+
+    .lesson-overview-teacher
+    {
+        transform: translate(410%, 180%);
+    }
+
+    .lesson-overview-content
+    {
+        margin-top: 0;
+    }
+
+    .lesson-overview-content h3
+    {
+        font-size: 2.5rem;
+    }
+
+    .lesson-overview-content h5
+    {
+        font-size: 2rem;
+    }
+
+    .lesson-overview-footer
+    {
+        width: 80px;
+        height: 80px;
+        border-radius: 40px;
+        display: flex;
+    }
+
+    .lesson-overview-footer span
+    {
+        font-size: 1.8rem;
+    }
+}
+
+@media (min-width: 992px)
+{
+    .lesson-overview-content h3
+    {
+        font-size: 3rem;
+    }
+
+    .lesson-overview-content h5
+    {
+        font-size: 2.5rem;
+    }
+    .lesson-overview-footer
+    {
+        width: 125px;
+        height: 125px;
+        border-radius: 75px;
+    }
+
+    .lesson-overview-footer span
+    {
+        font-size: 2rem;
+    }
+}

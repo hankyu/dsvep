@@ -1,0 +1,24 @@
+/* ------------------ */
+/*     Datepicker     */
+/* ------------------ */
+.customDatepicker {
+    .form-control {
+        background-color: $white;
+        border: 1px solid $bs-border;
+        font-size: 0.8rem;
+    }
+
+    @media (max-width: $max-w-xs) {
+        .vdp-datepicker__calendar {
+            width: 100%;
+            max-width: 300px;
+        }
+    }
+
+    @media (max-height: $max-h-xxs) {
+        .vdp-datepicker__calendar .cell {
+            height: 30px;
+            line-height: 30px;
+        }
+    }
+}

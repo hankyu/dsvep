@@ -1,0 +1,122 @@
+@import './base.scss';
+
+a:hover,
+a:focus {
+    color: #FF98AA;
+}
+
+#navigation {
+    border-top: 5px solid #FF98AA;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0px;
+}
+
+a,.tp-caption a.btn:hover {
+	color: #FF4b68;
+}
+.top-nav-collapse {
+	background: #FF98AA;
+}
+
+.carousel-indicators .active {
+    background-color: #FF98AA;
+}
+
+.header-text h2 span {
+    background-color: #FF98AA;
+}
+
+
+.navbar-custom ul.nav ul.dropdown-menu li a:hover {
+	color: #FF98AA;
+}
+
+.owl-theme .owl-controls .owl-page.active span,
+.owl-theme .owl-controls.clickable .owl-page:hover span {
+    background-color: #FF98AA;
+}
+
+.widget-avatar .avatar:hover {
+    border: 5px solid #FF98AA;
+}
+
+
+/*---------------*/
+/*     color     */
+/*---------------*/
+@each $name, $color in $colors
+{
+    .color-#{$name}
+    {
+        color: $color;
+    }
+}
+
+
+/*------------------*/
+/*     bg color     */
+/*------------------*/
+@each $name, $color in $colors
+{
+    .bg-#{$name}
+    {
+        background: $color;
+    }
+}
+
+
+/*-------------*/
+/*     btn     */
+/*-------------*/
+@each $name, $color in $colors {
+    .btn-#{$name}
+    {
+        color: #FFF;
+        background-color: $color;
+        border-color: $color;
+
+        &:hover
+        {
+            background-color: darken($color,5%);
+            border-color: darken($color,5%);
+        }
+    }
+}
+
+.bg-fundraising
+{
+    background: #FF98AA;
+}
+
+
+
+
+.highlight-color {
+	background-color: #FF98AA;
+}
+
+.service-box:hover {
+	border-bottom: 2px solid #FF98AA;
+}
+
+
+
+form#contact-form input:focus,form#contact-form select:focus,form#contact-form textarea:focus {
+	border-color: #FF98AA;
+}
+form.search-form input:focus {
+	border-color: #FF98AA;
+}
+
+
+/*------------*/
+/*   footer   */
+/*------------*/
+ul.footer-menu li a:hover {
+	color: #FF98AA;
+}
+
+footer a.totop:hover {
+	color: #FF98AA;
+}

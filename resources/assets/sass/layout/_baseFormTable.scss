@@ -1,0 +1,81 @@
+table.baseFormTable {
+    min-width: 80%;
+    border-collapse: separate;
+    border-spacing: 0 0.5rem;
+    margin: 1rem auto;
+
+    tr {
+        th {
+            text-align: right;
+            vertical-align: top;
+            line-height: 2.4rem;
+            padding-right: 1rem;
+            white-space: nowrap;
+            width: 1px;
+
+            &.baseFormTable__required {
+                position: relative;
+
+                &:after {
+                    content: '*';
+                    color: $emphasized2;
+                    position: absolute;
+                    right: 0.5rem;
+                    top: 0;
+                }
+            }
+        }
+
+        .baseFormTable__TDradio {
+            line-height: 2.4rem;
+
+            .form-group {
+                margin-bottom: 0;
+            }
+
+            .custom-control-label::before,
+            .custom-control-label::after {
+                top: 0.65rem;
+            }
+        }
+
+        .form-text {
+            margin-top: 0;
+            color: $lightgray !important;
+        }
+    }
+
+    @media (max-width: $max-w-xs) {
+        min-width: 100%;
+        display: block;
+        tr {
+            display: block;
+            padding-bottom: 0.6rem;
+            th,
+            td {
+                display: block;
+            }
+
+            th {
+                line-height: 1.5;
+
+                &.baseFormTable__required {
+                    position: static;
+
+                    &:after {
+                        position: static;
+                        margin-left: 0.2rem;
+                    }
+                }
+            }
+            .baseFormTable__TDradio {
+                line-height: 1.5;
+
+                .custom-control-label::before,
+                .custom-control-label::after {
+                    top: 0.25rem;
+                }
+            }
+        }
+    }
+}
